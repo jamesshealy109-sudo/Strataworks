@@ -46,3 +46,8 @@ setInterval(updateClock, 1000);
 
 const year = document.querySelector('#year');
 if (year) year.textContent = String(new Date().getFullYear());
+
+const successMessage = document.querySelector('#form-success');
+if (successMessage && new URLSearchParams(window.location.search).get('message') === 'sent') {
+  successMessage.hidden = false;
+}
