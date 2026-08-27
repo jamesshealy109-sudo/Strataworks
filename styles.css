@@ -123,8 +123,7 @@ button { font: inherit; }
 .section { padding: clamp(6rem, 11vw, 11rem) var(--pad); }
 .section-heading { display: grid; grid-template-columns: minmax(0,1.3fr) minmax(260px,.55fr); gap: 3rem; align-items: end; margin-bottom: clamp(3.5rem, 7vw, 6rem); }
 .section-heading h2, .manifesto h2, .process-intro h2, .contact h2 { margin: 0; font-size: clamp(3.25rem, 7vw, 8rem); line-height: .88; letter-spacing: -.06em; text-transform: uppercase; }
-.section-heading > p:last-child, .section-heading-inline > p { margin: 0 0 .5rem; color: #95a5b6; line-height: 1.6; font-size: 1rem; }
-.section-heading-inline { grid-template-columns: minmax(0,1fr) minmax(250px,.4fr); }
+.section-heading > p:last-child { margin: 0 0 .5rem; color: #95a5b6; line-height: 1.6; font-size: 1rem; }
 .kicker { color: var(--blue); }
 
 .services { background: var(--paper); color: var(--ink); }
@@ -167,26 +166,6 @@ button { font: inherit; }
 .manifesto-copy { width: min(600px, 100%); margin: clamp(2rem, 5vw, 5rem) 0 0 auto; display: flex; align-items: center; gap: 3rem; }
 .manifesto-copy p { margin: 0; color: #aab8c6; font-size: 1.15rem; line-height: 1.65; }
 .stamp { flex: 0 0 auto; display: grid; place-items: center; width: 120px; height: 120px; border: 1px solid var(--coral); border-radius: 50%; color: var(--coral); text-align: center; font: 600 .57rem/1.5 "IBM Plex Mono", monospace; transform: rotate(8deg); }
-
-.work { background: #e7e9e8; color: var(--ink); }
-.work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
-.project-card { background: white; border: 1px solid #ccd0d0; overflow: hidden; }
-.project-visual { position: relative; min-height: clamp(330px, 42vw, 600px); display: grid; place-items: center; overflow: hidden; }
-.project-visual img { position: relative; z-index: 3; object-fit: contain; transition: transform .5s ease; }
-.project-card:hover .project-visual img { transform: scale(1.05); }
-.project-cna .project-visual { background: radial-gradient(circle at 50%, #fff 0 14%, #e8f0fc 14% 36%, #aac6ec 36% 36.5%, #f7f6f1 36.5%); }
-.project-cna img { width: 34%; aspect-ratio: 1; border-radius: 50%; box-shadow: 0 25px 55px rgba(10,42,80,.18); }
-.project-orbit { position: absolute; border: 1px solid rgba(23,108,255,.22); border-radius: 50%; }
-.orbit-a { width: 68%; aspect-ratio: 1; }.orbit-b { width: 90%; aspect-ratio: 1; border-color: rgba(196,255,69,.6); }
-.project-lex .project-visual { background: #101e18; }
-.project-lex img { width: 54%; max-height: 240px; mix-blend-mode: screen; }
-.terrain { position: absolute; left: -10%; width: 120%; height: 55%; border-radius: 50%; border: 1px solid rgba(196,255,69,.32); }
-.terrain-one { bottom: -24%; }.terrain-two { bottom: -12%; }.terrain-three { bottom: 1%; opacity: .45; }
-.project-meta { display: flex; align-items: center; justify-content: space-between; padding: 1.5rem; border-top: 1px solid #d7d9d8; }
-.project-meta p { margin: 0 0 .35rem; color: #717a81; font: 500 .56rem "IBM Plex Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
-.project-meta h3 { margin: 0; font-size: clamp(1.15rem, 2vw, 1.65rem); }
-.project-meta > span { display: grid; place-items: center; width: 48px; height: 48px; border: 1px solid #adb4b7; font-size: 1.3rem; transition: .2s ease; }
-.project-card:hover .project-meta > span { color: white; background: var(--blue); border-color: var(--blue); }
 
 .process { display: grid; grid-template-columns: minmax(300px,.75fr) minmax(500px,1fr); gap: clamp(4rem, 10vw, 10rem); }
 .process-intro { position: sticky; top: 130px; align-self: start; }
@@ -248,14 +227,12 @@ button { font: inherit; }
   .network-stage { height: 330px; }
   .node small { font-size: .43rem; }
   .ops-metrics span { display: none; }
-  .section-heading, .section-heading-inline { grid-template-columns: 1fr; gap: 1.5rem; }
+  .section-heading { grid-template-columns: 1fr; gap: 1.5rem; }
   .section-heading h2, .manifesto h2, .contact h2 { font-size: clamp(3rem, 16vw, 5rem); }
   .service-card, .service-feature, .service-wide { grid-column: span 12; min-height: 350px; }
   .service-icon { width: 100px; right: 1rem; opacity: .75; }
   .browser-frame { position: relative; right: auto; bottom: auto; width: 100%; height: 130px; margin-top: 2rem; }
   .manifesto-copy { align-items: flex-start; flex-direction: column; }
-  .work-grid { grid-template-columns: 1fr; }
-  .project-visual { min-height: 360px; }
   .process { gap: 3rem; }
   .process-list li { grid-template-columns: 40px 1fr; gap: .8rem; }
   .contact-footer { flex-direction: column; gap: .7rem; margin-top: 5rem; }
