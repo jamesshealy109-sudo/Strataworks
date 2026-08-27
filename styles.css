@@ -115,10 +115,12 @@ button { font: inherit; }
 .ops-metrics span { margin-bottom: .4rem; color: var(--muted); font-size: .55rem; text-transform: uppercase; }
 .ops-metrics strong { color: var(--lime); font-size: .72rem; font-weight: 500; text-transform: uppercase; }
 
-.signal-strip { overflow: hidden; background: var(--blue); color: white; border-block: 1px solid rgba(255,255,255,.35); transform: rotate(-1deg) scale(1.02); }
-.signal-track { display: flex; width: max-content; gap: 1.5rem; align-items: center; padding: .85rem 0; font: 600 .73rem "IBM Plex Mono", monospace; text-transform: uppercase; letter-spacing: .12em; animation: ticker 27s linear infinite; }
-.signal-track b { color: var(--lime); }
-@keyframes ticker { to { transform: translateX(-50%); } }
+.signal-strip { overflow: hidden; background: var(--blue); color: white; border-block: 1px solid rgba(255,255,255,.35); }
+.signal-track { display: flex; width: max-content; gap: 2.5rem; align-items: center; padding: .9rem 0; font: 600 .7rem "IBM Plex Mono", monospace; text-transform: uppercase; letter-spacing: .11em; animation: ticker 52s linear infinite; will-change: transform; }
+.signal-strip:hover .signal-track { animation-play-state: paused; }
+.signal-group { display: flex; align-items: center; gap: 1.4rem; white-space: nowrap; }
+.signal-group b { color: var(--lime); font-size: .62rem; }
+@keyframes ticker { to { transform: translateX(calc(-50% - 1.25rem)); } }
 
 .section { padding: clamp(6rem, 11vw, 11rem) var(--pad); }
 .section-heading { display: grid; grid-template-columns: minmax(0,1.3fr) minmax(260px,.55fr); gap: 3rem; align-items: end; margin-bottom: clamp(3.5rem, 7vw, 6rem); }
