@@ -224,6 +224,10 @@ button { font: inherit; }
 
 .site-footer { min-height: 150px; display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 2rem var(--pad); color: #8190a0; font: .58rem "IBM Plex Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
 .site-footer img { width: 240px; height: auto; }
+.footer-easter-egg { display: grid; place-items: center; width: 42px; height: 42px; opacity: .32; filter: grayscale(1); transition: opacity .25s ease, filter .25s ease, transform .25s ease; }
+.footer-easter-egg img { width: 32px; height: 32px; border-radius: 50%; object-fit: contain; }
+.footer-easter-egg:hover, .footer-easter-egg:focus-visible { opacity: .9; filter: grayscale(0); transform: rotate(-6deg) scale(1.08); }
+.footer-easter-egg:focus-visible { outline: 1px solid var(--cyan); outline-offset: 4px; }
 
 .reveal { opacity: 1; transform: none; }
 .has-js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .75s ease, transform .75s cubic-bezier(.22,1,.36,1); }
