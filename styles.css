@@ -259,6 +259,7 @@ button { font: inherit; }
   .menu-toggle { display: block; position: relative; z-index: 3; }
   .site-nav { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 1.75rem; padding: 5rem var(--pad); background: rgba(7,16,28,.98); transform: translateX(100%); transition: transform .3s ease; font-size: 1rem; }
   .site-nav.is-open { transform: translateX(0); }
+  .site-nav { height: 100dvh; overflow-y: auto; }
   .site-nav .nav-cta { margin-top: .5rem; }
   .menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(4px) rotate(45deg); }
   .menu-toggle[aria-expanded="true"] span:nth-child(2) { transform: translateY(-4px) rotate(-45deg); }
