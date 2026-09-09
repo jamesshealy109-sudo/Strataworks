@@ -51,3 +51,17 @@ const successMessage = document.querySelector('#form-success');
 if (successMessage && new URLSearchParams(window.location.search).get('message') === 'sent') {
   successMessage.hidden = false;
 }
+
+const query = new URLSearchParams(window.location.search);
+
+const demoSuccess = document.querySelector('#demo-success');
+if (demoSuccess && query.get('demo') === 'sent') {
+  demoSuccess.hidden = false;
+}
+
+const attributionFields = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+attributionFields.forEach((name) => {
+  const input = document.querySelector(`.demo-form input[name="${name}"]`);
+  const value = query.get(name);
+  if (input && value) input.value = value;
+});
