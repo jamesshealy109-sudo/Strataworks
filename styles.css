@@ -295,3 +295,29 @@ button { font: inherit; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* A product feature beside the Capabilities statement, before the service grid. */
+.capabilities-intro { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: clamp(2rem,5vw,5rem); align-items: center; margin-bottom: clamp(3.5rem,7vw,6rem); }
+.capabilities-heading { grid-column: 2; grid-row: 1; }
+.capabilities-heading h2 { margin: 0; font-size: clamp(3.25rem,7vw,8rem); line-height: .88; letter-spacing: -.06em; text-transform: uppercase; }
+.capabilities-heading > p:last-child { max-width: 420px; margin: 2rem 0 0; color: #52606b; line-height: 1.65; }
+.featured-platform { grid-column: 1; grid-row: 1; padding: clamp(1.4rem,3vw,2.6rem); background: var(--ink); color: var(--paper); border-top: 4px solid var(--blue); }
+.featured-platform-kicker { color: var(--cyan); margin: 0 0 1.5rem; font: 500 .6rem/1.7 "IBM Plex Mono",monospace; letter-spacing: .08em; }
+.featured-platform-name { margin: 0 0 .7rem; color: #acbbca; font: .65rem/1.5 "IBM Plex Mono",monospace; }
+.featured-platform h3 { margin: 0 0 1.2rem; max-width: 580px; font-size: clamp(1.8rem,3vw,3rem); letter-spacing: -.045em; line-height: 1.05; }
+.featured-platform h3 + p { color: #afbece; margin: 0; font-size: .95rem; line-height: 1.65; }
+.featured-platform-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.7rem; margin: 1.8rem 0 2rem; }
+.featured-platform .button-primary { background: var(--cyan); }
+.featured-platform .text-link { font-size: .65rem; }
+.featured-platform-ui { border-top: 1px solid var(--line); }
+.featured-platform-ui > div { display: grid; grid-template-columns: 80px minmax(0,1fr); gap: .5rem; padding: .8rem 0; border-bottom: 1px solid var(--line); }
+.featured-platform-ui span { color: var(--cyan); font: .58rem/1.6 "IBM Plex Mono",monospace; }
+.featured-platform-ui strong { font-size: .8rem; font-weight: 500; }
+.featured-platform a:focus-visible { outline: 3px solid var(--cyan); outline-offset: 5px; }
+.product-proof { margin-top: 2rem; max-width: 760px; line-height: 1.7; color: #bac7d5; }
+.product-proof a { color: var(--cyan); text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 760px) {
+  .capabilities-intro { grid-template-columns: 1fr; gap: 2.5rem; }
+  .capabilities-heading, .featured-platform { grid-column: auto; grid-row: auto; }
+  .capabilities-heading h2 { font-size: clamp(3rem,16vw,5rem); }
+}
