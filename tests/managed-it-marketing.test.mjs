@@ -5,9 +5,9 @@ const read = path => readFileSync(path, 'utf8');
 const pagePath = 'managed-it-services/index.html';
 assert.ok(existsSync(pagePath), 'managed IT landing page must exist');
 const page = read(pagePath);
-assert.match(page, /<title>Managed IT Services Columbia SC \| Business IT Support \| StrataWorks<\/title>/);
+assert.match(page, /<title>Managed IT Services in Lexington &amp; Columbia, SC \| StrataWorks<\/title>/);
 assert.match(page, /<link rel="canonical" href="https:\/\/strataworks\.tech\/managed-it-services\/">/);
-for (const text of ['Columbia', 'Lexington', 'Enterprise IT support.', 'Without enterprise bureaucracy.', 'Schedule an IT Consultation', '(803) 386-7728', 'tel:+18033867728']) {
+for (const text of ['Columbia', 'Lexington', 'Your local IT department.', 'five employees or fifty', 'Microsoft 365', 'Schedule an IT Consultation', '(803) 386-7728', 'tel:+18033867728']) {
   assert.ok(page.includes(text), `missing visible positioning or conversion: ${text}`);
 }
 assert.match(page, /<form[^>]*id="msp-consultation-form"[^>]*action="https:\/\/formsubmit\.co\/james@strataworks\.tech"[^>]*method="POST"/);
@@ -20,7 +20,7 @@ for (const name of ['utm_source','utm_medium','utm_campaign','utm_term','utm_con
 }
 const graph = JSON.parse(page.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'];
 const service = graph.find(item => item['@type'] === 'Service');
-assert.deepEqual(service.areaServed, ['Columbia, South Carolina', 'Lexington, South Carolina', 'South Carolina Midlands']);
+assert.deepEqual(service.areaServed, ['Lexington, South Carolina', 'Columbia, South Carolina', 'West Columbia, South Carolina', 'Irmo, South Carolina', 'Cayce, South Carolina', 'Chapin, South Carolina', 'South Carolina Midlands']);
 assert.ok(!JSON.stringify(graph).match(/aggregateRating|review|price|streetAddress/));
 assert.ok(read('sitemap.xml').includes('https://strataworks.tech/managed-it-services/'));
 for (const file of ['services/it-consulting/index.html','services/networking/index.html']) {
@@ -30,4 +30,16 @@ const touched = [pagePath, 'managed-it-services/managed-it.css', 'managed-it-ser
 const oldPhone = ['(803) ' + '303-6301', '+1803' + '3036301'];
 for (const file of touched) for (const number of oldPhone) assert.ok(!read(file).includes(number), `stale phone in ${file}`);
 assert.doesNotMatch(page, /24\/7|99\.9%|SOC 2|guaranteed savings|#1 managed|industry.leading/i);
+assert.doesNotMatch(page, /healthcare|medical|dental|HIPAA|free IT consultation|noindex/i);
+assert.equal((page.match(/<h1[ >]/g) || []).length, 1);
+for (const field of ['name', 'company', 'email', 'phone', 'users', 'locations', 'service', 'message']) assert.ok(page.includes(`name="${field}"`), field);
+for (const range of ['1–5', '6–10', '11–25', '26–50', '51–100', '100+', '3–5', '6+']) assert.ok(page.includes(`<option>${range}</option>`), range);
+assert.match(page, /id="msp-consultation-error"[^>]*role="alert"[^>]*hidden/);
+assert.match(read('index.html'), /href="managed-it-services\/"/);
+for (const file of ['index.html', pagePath, 'backflow-operations-platform/index.html', ...['it-consulting','networking','ai-automation','business-phone-systems','web-design'].map(service => `services/${service}/index.html`)]) {
+  const html = read(file);
+  assert.equal(html.split('gtag/js?id=AW-18419218909').length - 1, 1, file);
+  assert.equal(html.split("gtag('config', 'AW-18419218909');").length - 1, 1, file);
+}
+
 console.log('Managed IT marketing regression checks passed.');
