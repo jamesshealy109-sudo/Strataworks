@@ -1,0 +1,24 @@
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+
+const home = readFileSync('index.html', 'utf8');
+const feature = home.match(/<aside[^>]*aria-labelledby="featured-managed-it-title"[^>]*>([\s\S]*?)<\/aside>/)?.[1];
+assert.ok(feature, 'homepage must feature Managed IT');
+assert.match(feature, /FEATURED SERVICE \/ MANAGED IT/);
+assert.match(feature, /<h3 id="featured-managed-it-title">Your IT department, without the full-time overhead\.<\/h3>/);
+assert.match(feature, /href="\/managed-it-services\/">Explore Managed IT/);
+assert.match(feature, /href="\/managed-it-services\/#consultation">Talk With StrataWorks/);
+assert.match(readFileSync('managed-it-services/index.html', 'utf8'), /id="consultation"/);
+const services = home.match(/<section class="section services"[\s\S]*?<\/section>/)[0];
+assert.ok(services.includes(feature), 'feature belongs in Capabilities');
+assert.match(services, /href="managed-it-services\/">Need ongoing IT support\?/);
+assert.match(services, /Backflow Operations Platform/);
+assert.match(services, /href="backflow-operations-platform\/#demo">Request a Demo/);
+assert.equal((services.match(/<article class="service-card /g) || []).length, 6);
+const footer = home.match(/<footer\b[\s\S]*?<\/footer>/)[0];
+assert.match(footer, /href="\/managed-it-services\/">Managed IT Services<\/a>/);
+const google = footer.match(/<a\b[^>]*href="https:\/\/share\.google\/gXDWkEUj6sbTTJFo4"[^>]*>/)?.[0];
+assert.ok(google, 'footer must link to the Google Business Profile');
+assert.match(google, /target="_blank"/);
+assert.match(google, /rel="noopener noreferrer"/);
+console.log('Homepage discoverability regression checks passed.');
