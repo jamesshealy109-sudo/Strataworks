@@ -22,3 +22,6 @@ assert.ok(google, 'footer must link to the Google Business Profile');
 assert.match(google, /target="_blank"/);
 assert.match(google, /rel="noopener noreferrer"/);
 console.log('Homepage discoverability regression checks passed.');
+assert.match(google, /aria-label="Find StrataWorks on Google"/);
+assert.match(footer, /<img src="assets\/google-logo.png" alt="Google"/);
+for (const label of ['Computers + Microsoft 365', 'Networks + Wi-Fi', 'Backups + security', 'Phones + vendors']) assert.ok(feature.includes(label));

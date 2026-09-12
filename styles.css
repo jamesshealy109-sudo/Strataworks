@@ -228,6 +228,8 @@ button { font: inherit; }
 .footer-links { display: flex; flex-direction: column; gap: 1rem; font-size: .7rem; line-height: 1.6; }
 .footer-links a:hover { color: var(--cyan); text-decoration: underline; }
 .footer-links a:focus-visible { outline: 2px solid var(--cyan); outline-offset: 5px; }
+.footer-google { align-self: flex-start; display: flex; align-items: center; min-height: 44px; }
+.site-footer .footer-google img { width: 92px; height: 30px; }
 .footer-easter-egg { display: grid; place-items: center; width: 42px; height: 42px; opacity: .32; filter: grayscale(1); transition: opacity .25s ease, filter .25s ease, transform .25s ease; }
 .footer-easter-egg img { width: 32px; height: 32px; border-radius: 50%; object-fit: contain; }
 .footer-easter-egg:hover, .footer-easter-egg:focus-visible { opacity: .9; filter: grayscale(0); transform: rotate(-6deg) scale(1.08); }
@@ -319,13 +321,15 @@ button { font: inherit; }
 .featured-platform-ui span { color: var(--cyan); font: .58rem/1.6 "IBM Plex Mono",monospace; }
 .featured-platform-ui strong { font-size: .8rem; font-weight: 500; }
 .featured-platform a:focus-visible { outline: 3px solid var(--cyan); outline-offset: 5px; }
-.featured-managed-it { margin-bottom: 1.25rem; }
+.featured-managed-it { display: grid; grid-template-columns: minmax(0,1.6fr) minmax(0,1fr); gap: clamp(2rem,5vw,5rem); align-items: center; margin-bottom: 1.25rem; }
+.managed-it-summary { padding: clamp(1rem,2vw,1.8rem); background: var(--ink-2); border: 1px solid var(--line); }
 .featured-managed-it h3 { max-width: 760px; font-size: clamp(1.6rem,2.5vw,2.4rem); }
 .featured-managed-it h3 + p { max-width: 900px; }
 .featured-managed-it .featured-platform-actions { margin-bottom: 0; }
 .product-proof { margin-top: 2rem; max-width: 760px; line-height: 1.7; color: #bac7d5; }
 .product-proof a { color: var(--cyan); text-decoration: underline; text-underline-offset: 4px; }
 @media (max-width: 760px) {
+  .featured-managed-it { grid-template-columns: 1fr; }
   .capabilities-intro { grid-template-columns: 1fr; gap: 2.5rem; }
   .capabilities-heading, .featured-platform { grid-column: auto; grid-row: auto; }
   .capabilities-heading h2 { font-size: clamp(3rem,16vw,5rem); }
