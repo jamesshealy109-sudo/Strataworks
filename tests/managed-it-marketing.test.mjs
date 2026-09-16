@@ -7,9 +7,17 @@ assert.ok(existsSync(pagePath), 'managed IT landing page must exist');
 const page = read(pagePath);
 assert.match(page, /<title>Managed IT Services in Lexington &amp; Columbia, SC \| StrataWorks<\/title>/);
 assert.match(page, /<link rel="canonical" href="https:\/\/strataworks\.tech\/managed-it-services\/">/);
-for (const text of ['Columbia', 'Lexington', 'Your local IT department.', 'five employees or fifty', 'Microsoft 365', 'Schedule an IT Consultation', '(803) 386-7728', 'tel:+18033867728']) {
+assert.match(page, /<h1>Managed IT for small businesses\.<br><span>Your local IT department\.<\/span><\/h1>/);
+for (const text of ['Columbia', 'Lexington', '1–15 employees', 'Your local IT department.', 'Microsoft 365', 'Schedule an IT Consultation', '(803) 386-7728', 'tel:+18033867728']) {
   assert.ok(page.includes(text), `missing visible positioning or conversion: ${text}`);
 }
+assert.match(page, /<p class="msp-lede">Managed IT support for businesses with 1–15 employees in Lexington, Columbia, and the Midlands\./);
+assert.match(page, /How is managed IT support scoped\?/);
+assert.match(page, /We discuss your team, systems, and support needs, then define the services and responsibilities in an agreement tailored to your business\./);
+assert.match(page, /How much does managed IT cost\?/);
+assert.match(page, /Pricing depends on your environment and the work involved\. Contact StrataWorks to discuss your needs and a tailored proposal\./);
+assert.match(page, /Can you help with a smaller IT need\?/);
+assert.match(page, /Hourly support may be available for smaller engagements\. Contact us to discuss the work you need\./);
 assert.match(page, /<form[^>]*id="msp-consultation-form"[^>]*action="https:\/\/formsubmit\.co\/james@strataworks\.tech"[^>]*method="POST"/);
 assert.match(page, /data-conversion="consultation-form"/);
 assert.match(page, /data-conversion="phone-call"/);
@@ -31,6 +39,7 @@ const oldPhone = ['(803) ' + '303-6301', '+1803' + '3036301'];
 for (const file of touched) for (const number of oldPhone) assert.ok(!read(file).includes(number), `stale phone in ${file}`);
 assert.doesNotMatch(page, /24\/7|99\.9%|SOC 2|guaranteed savings|#1 managed|industry.leading/i);
 assert.doesNotMatch(page, /healthcare|medical|dental|HIPAA|free IT consultation|noindex/i);
+assert.doesNotMatch(page, /\$\s?\d|\d+\s?(?:month|months|year|years)\b|contract length|response time guarantee|guaranteed response/i);
 assert.equal((page.match(/<h1[ >]/g) || []).length, 1);
 for (const field of ['name', 'company', 'email', 'phone', 'users', 'locations', 'service', 'message']) assert.ok(page.includes(`name="${field}"`), field);
 for (const range of ['1–5', '6–10', '11–25', '26–50', '51–100', '100+', '3–5', '6+']) assert.ok(page.includes(`<option>${range}</option>`), range);
