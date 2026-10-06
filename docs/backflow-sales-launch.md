@@ -24,11 +24,11 @@ The public checkout was inspected on October 5, 2026: merchant Strataworks, prod
 1. Edit this Payment Link in Stripe. Under **After the payment**, select a redirect to:
    https://strataworks.tech/backflow-operations-platform/setup/
 2. Enable successful-payment notifications and customer receipts for the operating account. Confirm the business's actual cancellation, refund, and billing policy before adding corresponding promises to this page.
-3. Verify that the existing FormSubmit recipient james@strataworks.tech is activated. Run an approved end-to-end setup submission and check delivery to the actual mailbox. Local validation and a static receipt page do not prove email delivery.
+3. The production-domain FormSubmit setup endpoint was tested on October 6, 2026: the service accepted a labeled test, and Outlook confirmed delivery to james@strataworks.tech. Local previews require separate origin activation. After publication, verify the browser form on the public setup page as well.
 4. Review the narration and visuals of the reused demo footage before publishing.
 5. Publish the feature after approval, then check the checkout link and setup page on the public domain.
 
-The completion redirect and mailbox delivery were not verified through an actual purchase/submission during development. A browser redirect is never evidence that the customer paid.
+Stripe Dashboard requires owner sign-in, so the completion redirect is still unverified. Checkout opens in a new tab and the pricing card gives an explicit link to send setup details after payment; the sales page stays available as a fallback. No live purchase was submitted. A browser redirect is never evidence that the customer paid.
 
 [Stripe: post-payment configuration, notifications and receipts](https://docs.stripe.com/payment-links/post-payment)
 
