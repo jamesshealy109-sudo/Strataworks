@@ -1,0 +1,65 @@
+{
+  "fictional_demo_data": true,
+  "source_release": "2026-10-04-v1",
+  "assets": [
+    {
+      "name": "field-test",
+      "source_tutorial": "09-field-test",
+      "duration_seconds": 121.24034179999944
+    },
+    {
+      "name": "review-report",
+      "source_tutorial": "10-review-report",
+      "duration_seconds": 121.26229349999994
+    },
+    {
+      "name": "invoice-payment",
+      "source_tutorial": "11-invoice-payment",
+      "duration_seconds": 121.50951589999931
+    },
+    {
+      "name": "product-tour",
+      "duration_seconds": 152.143,
+      "chapters": [
+        {
+          "title": "Customer records",
+          "start_seconds": 0.0
+        },
+        {
+          "title": "Schedule the visit",
+          "start_seconds": 30.721
+        },
+        {
+          "title": "Field results",
+          "start_seconds": 60.914
+        },
+        {
+          "title": "Approved report",
+          "start_seconds": 91.314
+        },
+        {
+          "title": "Linked invoice",
+          "start_seconds": 121.635
+        }
+      ]
+    }
+  ],
+  "sha256": {
+    "field-test-poster.jpg": "2abed4b8ec373d746b5de13c298aca2f1b5222a63b769bbf8eb8c067f81fca32",
+    "field-test-transcript.txt": "d66e18e43223abc80cbb8a27c43f8613982bf8b79a5885e148f28dba61047579",
+    "field-test.mp4": "b5eff3bad515a149b981187db46ed8fd2383ec9d445ffe9ebfc716414d770a09",
+    "field-test.vtt": "b5e40123754b1aa631c6a207baea67fe70c2557f350d1450d81185cca24e304e",
+    "invoice-payment-poster.jpg": "38b6aba884e1e9d255e8b573c497a3d232d7241cbfcecf6e1e47e83f26b50d94",
+    "invoice-payment-transcript.txt": "c55d77b50c121927ec78a0cab97d2a1ffa30c513dcec3d6b73406ab815c25872",
+    "invoice-payment.mp4": "4d63ecfc575924e1da20cad750c9b723fec65d496ef2ddae36d3163fe4bb619c",
+    "invoice-payment.vtt": "a59d5d5bc9df55a4a15975fad6441234213a9c11b321b43e484a237a97d8923a",
+    "product-tour-poster.jpg": "1f195f05da541e8b3ae39f4e83826c71b4547d6ed53b6b1d017a9e7db0016307",
+    "product-tour-transcript.txt": "405979b2472f17deae72dff1f6d934a9ee28ee1a279f56a1d7791f8f853716c8",
+    "product-tour.mp4": "5a93c41c56ee52ad68b17f83d0a22334c5f21b0cb4469f5d12077eb177218a86",
+    "product-tour.vtt": "c45c908b0636c2d41958a3d398687fb1abccf3d99d93a6490811cb1d6294abf3",
+    "review-report-poster.jpg": "39ed45f97dd5b03bbd391b4d7ec0f7ae831ed901212ba500394280f19c6b916c",
+    "review-report-transcript.txt": "9068d5ed6fe9043eb794616971b88dcaf90e3fe63cf4b8406d61a125db13828e",
+    "review-report.mp4": "ca05b3a71aaf299bfe90c831af4b5d70b0ec562378791d41b856fdede3c33ddf",
+    "review-report.vtt": "a1753d0032f11a682c530f1e4798251890e6cc6b6de45f76dbac047796776122"
+  }
+}

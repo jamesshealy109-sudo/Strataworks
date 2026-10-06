@@ -1,0 +1,86 @@
+
+/* Self-guided Backflow sales flow. Keep the established StrataWorks palette and lettering. */
+.sales-page .button-primary { box-shadow: none; border: 1px solid var(--cyan); }
+.sales-page .button-primary:hover { transform: none; background: #b9efff; box-shadow: none; }
+.sales-page [hidden] { display: none !important; }
+.sales-page svg { flex: 0 0 auto; vertical-align: middle; }
+.sales-page .inline-link { display: inline-flex; align-items: center; gap: .6rem; min-height: 44px; text-decoration: underline; text-underline-offset: .3em; }
+.sales-page p { max-width: 70ch; }
+.sales-page :is(h1,h2,h3) { text-wrap: balance; letter-spacing: -.03em; }
+.sales-hero { padding: calc(var(--header-h) + 3.5rem) var(--pad) 4rem; display: grid; grid-template-columns: minmax(0,.85fr) minmax(0,1.15fr); gap: 3.5rem; align-items: center; }
+.sales-hero h1 { font-size: clamp(1.1rem,1.7vw,1.45rem); font-weight: 500; line-height: 1.4; margin: 0; color: #b9cbdc; }
+.sales-hero h1 span { display: block; margin-top: 1.1rem; color: var(--paper); font-size: clamp(2.5rem,4.8vw,5.5rem); line-height: 1.05; font-weight: 700; }
+.sales-lede { color: #b9cbdc; font-size: 1.1rem; line-height: 1.7; margin: 1.7rem 0; }
+.sales-hero .platform-breadcrumb { margin-bottom: 2rem; }
+.sales-hero .hero-actions { gap: 1.4rem; }
+.sales-hero-note, .media-note { color: #b9cbdc; font-size: .85rem; line-height: 1.6; margin-top: 1.3rem; }
+.tour-player { min-width: 0; }
+.sales-page video { width: 100%; display: block; aspect-ratio: 8/5; object-fit: contain; background: var(--ink); }
+.tour-player > video { border: 1px solid #405772; border-radius: 12px; }
+.tour-caption { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .7rem; margin-top: 1rem; font-size: .85rem; }
+.tour-caption a { color: var(--cyan); text-decoration: underline; text-underline-offset: .25em; }
+.tour-chapters { display: flex; flex-wrap: wrap; gap: .4rem 1rem; margin-top: 1rem; }
+.tour-chapters button { border: 0; border-bottom: 1px solid #536f8f; color: #d1e4f6; background: transparent; padding: .6rem .1rem; cursor: pointer; min-height: 44px; }
+.tour-chapters button:hover { color: var(--cyan); border-color: var(--cyan); }
+.sales-workflow { background: var(--paper); color: var(--ink); }
+.sales-page .section-heading { display: grid; grid-template-columns: 1.2fr 1fr; align-items: end; gap: 3rem; margin-bottom: 3rem; }
+.sales-page .platform-section h2 { font-size: clamp(2rem,3.4vw,4rem); text-transform: none; line-height: 1.12; letter-spacing: -.03em; }
+.sales-page .section-heading p { color: #455362; margin: 0; }
+.sales-guides { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 2rem; }
+.sales-guides video { border-radius: 12px; }
+.guide h3 { font-size: 1.4rem; margin: 1.3rem 0 .7rem; }
+.guide p { color: #455362; margin: 0 0 .8rem; }
+.guide .inline-link { font-size: .9rem; }
+.records-columns { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 3rem; margin-top: 3rem; }
+.records-columns > div { border-top: 1px solid #405772; padding-top: 1rem; }
+.records-columns h3 { margin: .5rem 0; font-size: 1.25rem; }
+.records-columns p { color: #b9cbdc; }
+.sales-page .jurisdiction-note { color: #b9cbdc; border-top: 1px solid #405772; padding-top: 1.5rem; margin: 2rem 0 0; font-size: .9rem; max-width: 100%; }
+.jurisdiction-note a { text-decoration: underline; text-underline-offset: .25em; color: var(--cyan); }
+.sales-pricing { background: #d9eef3; color: var(--ink); display: grid; grid-template-columns: minmax(0,1fr) minmax(0,.9fr); gap: clamp(2rem,6vw,7rem); align-items: start; }
+.pricing-intro { padding-top: 1.5rem; }
+.pricing-intro > p { color: #334a5c; margin: 2rem 0; }
+.launch-plan { background: var(--paper); border: 1px solid #a4b7bb; border-radius: 16px; padding: clamp(1.5rem,3vw,3rem); }
+.launch-plan h3 { margin: 0; font-size: 1.3rem; }
+.plan-price { display: flex; align-items: baseline; flex-wrap: wrap; gap: .7rem; margin: 1rem 0 0; }
+.plan-price strong { font-size: clamp(3rem,6vw,5.5rem); line-height: 1.1; letter-spacing: -.04em; }
+.plan-price span { color: #455362; }
+.launch-plan .plan-seats { margin-top: .7rem; font-weight: 600; }
+.plan-inclusions { padding-left: 1.2rem; margin: 1.8rem 0; line-height: 1.65; }
+.plan-inclusions li { margin-bottom: .6rem; }
+.launch-plan .button { width: 100%; text-align: left; }
+.checkout-pending p { font-size: .9rem; color: #455362; }
+.launch-plan .plan-timing { font-size: .95rem; font-weight: 600; margin-top: 1.5rem; }
+.launch-plan .plan-fine-print { font-size: .82rem; color: #455362; margin-bottom: 0; }
+.setup-steps { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 3rem; list-style: none; padding: 0; margin: 3rem 0 1.5rem; }
+.setup-steps li { display: flex; gap: 1.2rem; border-top: 1px solid #405772; padding-top: 1.5rem; }
+.setup-steps li > span { font-size: 1.2rem; color: var(--cyan); }
+.setup-steps h3 { font-size: 1.25rem; margin: 0; }
+.setup-steps p { color: #b9cbdc; }
+.sales-page .platform-faq a { text-decoration: underline; text-underline-offset: .25em; }
+.sales-page .demo-section { border-top: 1px solid #405772; }
+.sales-page .demo-form { border-radius: 12px; }
+.sales-page .demo-form :is(label, .form-note, small) { font-family: "Space Grotesk", sans-serif; }
+.sales-page .demo-form label { font-size: .95rem; }
+.sales-page .demo-form .form-note { font-size: .82rem; }
+.sales-page .demo-form :is(input,textarea) { caret-color: var(--cyan); }
+.sales-page .full-width { grid-column: 1 / -1; }
+.sales-page .form-trap { position: absolute; left: -10000px; width: 1px; height: 1px; }
+.sales-page .demo-form .field-error { display: block; color: #ffb8a5; font-size: .85rem; }
+.sales-page .demo-form [aria-invalid="true"] { border-color: #ffb8a5; }
+.sales-page .demo-form [type="submit"]:disabled { cursor: wait; opacity: .7; }
+.sales-page .form-success { color: #d1e4f6; font-size: .95rem; line-height: 1.7; }
+.setup-page { padding: calc(var(--header-h) + 3rem) var(--pad) 4rem; display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr); gap: 4rem; align-items: start; }
+.setup-copy h1 { font-size: clamp(2.7rem,4vw,4.5rem); line-height: 1.08; }
+.setup-copy > p:not(.platform-breadcrumb) { color: #b9cbdc; line-height: 1.7; }
+.setup-copy a:not(.inline-link) { text-decoration: underline; text-underline-offset: .25em; }
+@media(max-width:1080px) { .sales-hero { grid-template-columns: 1fr; gap: 2.5rem; } .sales-hero-copy { max-width: 850px; } .tour-player { max-width: 1000px; } .setup-page { grid-template-columns: 1fr; gap: 2rem; } }
+@media(max-width:760px) { .sales-hero { padding-top: calc(var(--header-h) + 2rem); gap: 2rem; } .sales-page .section-heading, .sales-guides, .records-columns, .sales-pricing, .setup-steps { grid-template-columns: 1fr; } .sales-page .section-heading { gap: 1.5rem; } .sales-guides { gap: 2.5rem; } .sales-hero h1 span { font-size: clamp(2.6rem,9.8vw,4rem); } .sales-hero .button { width: 100%; } .sales-page .platform-section { padding-top: 3.5rem; padding-bottom: 3.5rem; } .setup-page { padding-top: calc(var(--header-h) + 2rem); } .launch-plan .button { min-width: 0; } .records-columns, .setup-steps { gap: 1.2rem; } }
+
+/* Legibility and focus behavior for the sales surface. */
+.sales-page .brand-name small { font: 500 .7rem/1.35 "Space Grotesk", sans-serif; letter-spacing: .01em; opacity: 1; }
+.sales-page .platform-breadcrumb { font-size: .8rem; }
+.sales-page .site-nav { font-size: .8rem; }
+.sales-page .site-footer :is(p,a) { font-size: .85rem; }
+.sales-page .demo-form .form-note { text-transform: none; letter-spacing: normal; }
+@media(max-width:960px) { .sales-page .site-nav:not(.is-open) { visibility: hidden; } .sales-page .site-nav.is-open { visibility: visible; font-size: 1rem; } }

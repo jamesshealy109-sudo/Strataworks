@@ -1,0 +1,11 @@
+00:00:00.000 Find submitted work
+Open the review queue and find the submitted fictional test. Office staff review the result, readings, service records, tester credentials, and form. Return a record for correction when required information is wrong or incomplete.
+
+00:00:30.314 Review the test detail
+Open the test and inspect the stored readings and performed date. Confirm the selected form and licensed tester. Approval should follow your office review policy and the applicable municipality requirements.
+
+00:01:00.629 Approve and generate the PDF
+Approve and generate PDF stores the approval and an immutable report revision. This makes the approved document available for review and later submission. Approval itself does not mean the municipality has received or accepted the report.
+
+00:01:30.942 Open the approved report
+Open the exact approved PDF and inspect the fictional training report. The same approved revision is the one attached when preparing the municipality submission.

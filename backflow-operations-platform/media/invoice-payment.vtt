@@ -1,0 +1,37 @@
+WEBVTT
+
+00:00:00.656 --> 00:00:06.925
+From the approved test, create an invoice linked to the customer, location, and test.
+
+00:00:06.925 --> 00:00:12.149
+Confirm the service description, price, issue date, and due date.
+
+00:00:12.149 --> 00:00:16.662
+This link lets the submission workflow check payment eligibility.
+
+00:00:31.048 --> 00:00:35.290
+Save the draft and review its amount and related test.
+
+00:00:35.290 --> 00:00:38.777
+A draft is editable and has not been issued.
+
+00:00:38.777 --> 00:00:47.317
+An unpaid linked invoice can hold municipality submission until payment is recorded or an authorized office override is approved.
+
+00:01:01.308 --> 00:01:04.524
+Issue the invoice for manual delivery.
+
+00:01:04.524 --> 00:01:08.787
+This locks the issued document and enables payment recording.
+
+00:01:08.787 --> 00:01:16.195
+The application records an issued status; this recording does not email the invoice or run an online checkout.
+
+00:01:31.663 --> 00:01:35.194
+Record the fictional check payment and reference.
+
+00:01:35.194 --> 00:01:40.076
+The saved invoice balance becomes zero and status becomes paid.
+
+00:01:40.076 --> 00:01:47.194
+Manual recording does not move money through Stripe; it documents a payment you have already received and verified.

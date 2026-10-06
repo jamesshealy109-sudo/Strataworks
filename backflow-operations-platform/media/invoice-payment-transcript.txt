@@ -1,0 +1,11 @@
+00:00:00.000 Create a linked invoice
+From the approved test, create an invoice linked to the customer, location, and test. Confirm the service description, price, issue date, and due date. This link lets the submission workflow check payment eligibility.
+
+00:00:30.509 Save the invoice draft
+Save the draft and review its amount and related test. A draft is editable and has not been issued. An unpaid linked invoice can hold municipality submission until payment is recorded or an authorized office override is approved.
+
+00:01:00.890 Issue for manual delivery
+Issue the invoice for manual delivery. This locks the issued document and enables payment recording. The application records an issued status; this recording does not email the invoice or run an online checkout.
+
+00:01:31.140 Record the check payment
+Record the fictional check payment and reference. The saved invoice balance becomes zero and status becomes paid. Manual recording does not move money through Stripe; it documents a payment you have already received and verified.

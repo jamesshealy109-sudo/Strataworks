@@ -1,0 +1,11 @@
+00:00:00.000 Open assigned work
+On a phone-sized screen, open your assigned test from the selected route date. Confirm the customer, service address, and assembly identifiers before entering readings. Field access is limited to assigned operational work.
+
+00:00:30.361 Enter test results
+Choose the result and record the device readings, performed date and time, and any field notes. These are fictional training values. Use the actual measurements and required procedure for your device and authority.
+
+00:01:00.761 Save the field draft
+Save a draft while work is in progress. Check the saved state before leaving the page. Saving a draft does not send the report to the office review queue or approve it.
+
+00:01:30.998 Submit for office review
+When the record is complete, choose Save and submit for review. The stored status becomes submitted and office staff can review it. This step does not approve the PDF or deliver anything to the municipality.
