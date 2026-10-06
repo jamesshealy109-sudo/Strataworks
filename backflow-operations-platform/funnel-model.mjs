@@ -15,7 +15,7 @@ export function validateSetup(input = {}) {
   values.email = values.email.toLowerCase();
   if (values.email && !emailPattern.test(values.email)) errors.email = 'Enter a valid email address.';
   const staff = [...new Set(values.staff_emails.split(/[\s,;]+/).filter(Boolean).map(address => address.toLowerCase()))];
-  if (staff.length > 3) errors.staff_emails = 'The launch plan includes up to three staff logins. Enter no more than three email addresses.';
+  if (staff.length > 5) errors.staff_emails = 'The plan includes up to five staff logins. Enter no more than five email addresses.';
   else if (staff.some(address => !emailPattern.test(address))) errors.staff_emails = 'Enter valid staff email addresses, separated by commas or new lines.';
   values.staff_emails = staff.join('\n');
   return { errors, values };
