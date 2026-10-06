@@ -8,7 +8,10 @@ const sitemap = read('sitemap.xml');
 
 assert.match(home, /href="backflow-operations-platform\//, 'homepage must link to platform landing page');
 assert.match(home, /Backflow Operations Platform/i, 'homepage must name the platform');
-assert.match(home, /Request a Demo/i, 'homepage must expose the primary platform CTA');
+assert.match(home, /Explore Backflow Operations/i, 'second homepage space must link to the platform');
+assert.match(home, /href="backflow-operations-platform\/#pricing"/, 'second homepage space must link to platform pricing');
+assert.ok(home.indexOf('FEATURED SERVICE / MANAGED IT') < home.indexOf('02 / STRATAWORKS BACKFLOW OPERATIONS'), 'StrataWorks managed IT must lead before the Backflow Operations space');
+assert.match(home, /base rate guaranteed for 60 months/i, 'second homepage space must explain the rate guarantee');
 
 const platform = read('backflow-operations-platform/index.html');
 
@@ -22,6 +25,13 @@ assert.match(platform, /Georgia/i);
 assert.match(platform, /nationwide|national/i);
 assert.match(platform, /\(803\) 386-7728/);
 assert.match(platform, /tel:\+18033867728/);
+assert.match(platform, /up to five staff logins/i);
+assert.match(platform, /60 months/i);
+assert.match(platform, /Limited spots remaining/i);
+assert.match(platform, /<s>\$399\.99\/mo<\/s>/, 'future price must be visibly crossed out');
+assert.match(platform, /<s>\$495\/mo<\/s>/, 'annual-billed competitor equivalent must be visibly crossed out');
+assert.match(platform, /<s>\$625\/mo<\/s>/, 'monthly competitor rate must be visibly crossed out');
+assert.match(platform, /Lock in the \$300 rate/i);
 assert.match(sitemap, /https:\/\/strataworks\.tech\/backflow-operations-platform\//);
 
 const forbidden = [

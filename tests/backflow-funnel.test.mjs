@@ -24,9 +24,10 @@ test('checkout cannot open an unconfigured, disabled, fake, or test destination'
 test('setup requires contact and jurisdiction context before sending', () => {
   assert.deepEqual(Object.keys(validateSetup({}).errors).sort(), ['company', 'email', 'municipalities', 'name']);
 });
-test('setup accepts at most three unique staff email addresses', () => {
+test('setup accepts at most five unique staff email addresses', () => {
   const base = { name: 'Owner', company: 'Example Testing', email: 'owner@example.test', municipalities: 'Example water district' };
-  assert.ok(validateSetup({ ...base, staff_emails: 'a@example.test,b@example.test,c@example.test,d@example.test' }).errors.staff_emails);
+  assert.ok(validateSetup({ ...base, staff_emails: 'a@example.test,b@example.test,c@example.test,d@example.test,e@example.test,f@example.test' }).errors.staff_emails);
+  assert.deepEqual(validateSetup({ ...base, staff_emails: 'a@example.test,b@example.test,c@example.test,d@example.test,e@example.test' }).errors, {});
   const valid = validateSetup({ ...base, staff_emails: ' A@example.test\nB@example.test\na@example.test ' });
   assert.deepEqual(valid.errors, {});
   assert.equal(valid.values.staff_emails, 'a@example.test\nb@example.test');

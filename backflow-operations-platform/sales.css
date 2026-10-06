@@ -42,10 +42,19 @@
 .pricing-intro > p { color: #334a5c; margin: 2rem 0; }
 .launch-plan { background: var(--paper); border: 1px solid #a4b7bb; border-radius: 16px; padding: clamp(1.5rem,3vw,3rem); }
 .launch-plan h3 { margin: 0; font-size: 1.3rem; }
+.plan-price-comparison { display: grid; grid-template-columns: minmax(0,1fr) minmax(145px,.85fr); align-items: start; gap: 1rem 1.5rem; }
 .plan-price { display: flex; align-items: baseline; flex-wrap: wrap; gap: .7rem; margin: 1rem 0 0; }
 .plan-price strong { font-size: clamp(3rem,6vw,5.5rem); line-height: 1.1; letter-spacing: -.04em; }
 .plan-price span { color: #455362; }
+.plan-alternatives { border-left: 1px solid #a4b7bb; padding-left: 1.25rem; margin: 1rem 0 .3rem; display: grid; gap: 1rem; }
+.plan-alternative { margin: 0; color: #455362; font-size: .76rem; line-height: 1.4; }
+.plan-alternative span { display: block; }
+.plan-alternative s { display: block; color: #344c60; font-size: 1.45rem; font-weight: 600; text-decoration-thickness: 2px; text-decoration-color: #446075; }
 .launch-plan .plan-seats { margin-top: .7rem; font-weight: 600; }
+.launch-plan .plan-guarantee { margin: 1.25rem 0 0; line-height: 1.55; }
+.launch-plan .plan-availability { margin: .35rem 0 0; font-weight: 700; color: #075b70; }
+.launch-plan .plan-comparison-note { color: #455362; font-size: .76rem; line-height: 1.55; margin: 1.2rem 0 0; }
+.plan-comparison-note a { color: #075b70; text-decoration: underline; text-underline-offset: .2em; }
 .plan-inclusions { padding-left: 1.2rem; margin: 1.8rem 0; line-height: 1.65; }
 .plan-inclusions li { margin-bottom: .6rem; }
 .launch-plan .button { width: 100%; text-align: left; }
@@ -76,9 +85,11 @@
 .setup-copy a:not(.inline-link) { text-decoration: underline; text-underline-offset: .25em; }
 @media(max-width:1080px) { .sales-hero { grid-template-columns: 1fr; gap: 2.5rem; } .sales-hero-copy { max-width: 850px; } .tour-player { max-width: 1000px; } .setup-page { grid-template-columns: 1fr; gap: 2rem; } }
 @media(max-width:760px) { .sales-hero { padding-top: calc(var(--header-h) + 2rem); gap: 2rem; } .sales-page .section-heading, .sales-guides, .records-columns, .sales-pricing, .setup-steps { grid-template-columns: 1fr; } .sales-page .section-heading { gap: 1.5rem; } .sales-guides { gap: 2.5rem; } .sales-hero h1 span { font-size: clamp(2.6rem,9.8vw,4rem); } .sales-hero .button { width: 100%; } .sales-page .platform-section { padding-top: 3.5rem; padding-bottom: 3.5rem; } .setup-page { padding-top: calc(var(--header-h) + 2rem); } .launch-plan .button { min-width: 0; } .records-columns, .setup-steps { gap: 1.2rem; } }
+@media(max-width:900px) { .plan-price-comparison { grid-template-columns: 1fr; } .plan-alternatives { border-left: 0; border-top: 1px solid #a4b7bb; padding: 1rem 0 0; margin-top: 0; } }
 
 /* Legibility and focus behavior for the sales surface. */
 .sales-page .brand-name small { font: 500 .7rem/1.35 "Space Grotesk", sans-serif; letter-spacing: .01em; opacity: 1; }
+.sales-page .brand-name { font-size: clamp(.78rem,1.2vw,1rem); letter-spacing: .025em; text-shadow: none; }
 .sales-page .platform-breadcrumb { font-size: .8rem; }
 .sales-page .site-nav { font-size: .8rem; }
 .sales-page .site-footer :is(p,a) { font-size: .85rem; }

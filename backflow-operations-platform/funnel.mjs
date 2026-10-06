@@ -43,7 +43,7 @@ if (form) {
     try {
       const response = await fetch('https://formsubmit.co/ajax/james@strataworks.tech', {
         method: 'POST', signal: AbortSignal.timeout(20000), headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({ ...result.values, _subject: 'Backflow subscription setup details', _template: 'table', _captcha: 'false', package: '$300/month · up to three staff logins' }),
+        body: JSON.stringify({ ...result.values, _subject: 'Backflow subscription setup details', _template: 'table', _captcha: 'false', package: '$300/month · up to five staff logins · base rate guaranteed for 60 months while subscription stays active' }),
       });
       const body = await response.json();
       if (!response.ok || !(body.success === true || body.success === 'true')) throw new Error('Request not accepted');
