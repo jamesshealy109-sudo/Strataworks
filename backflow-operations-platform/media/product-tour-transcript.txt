@@ -1,0 +1,14 @@
+Customer records
+Create the customer with a name and contact information. The customer is the billing relationship. Our fictional example is Cedar Grove Market, with one service location and one assembly.
+
+Schedule the visit
+Choose the tester and calibrated gauge, set the appointment date, and confirm the relevant form. The recording uses a fixed scenario date. In your workspace, use the actual appointment and check any scheduling warnings.
+
+Field results
+Choose the result and record the device readings, performed date and time, and any field notes. These are fictional training values. Use the actual measurements and required procedure for your device and authority.
+
+Approved report
+Open the exact approved PDF and inspect the fictional training report. The same approved revision is the one attached when preparing the municipality submission.
+
+Linked invoice
+From the approved test, create an invoice linked to the customer, location, and test. Confirm the service description, price, issue date, and due date. This link lets the submission workflow check payment eligibility.
