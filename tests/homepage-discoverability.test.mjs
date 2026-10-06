@@ -18,10 +18,11 @@ assert.match(feature, /href="\/managed-it-services\/#consultation">Talk With Str
 assert.match(readFileSync('managed-it-services/index.html', 'utf8'), /id="consultation"/);
 const services = home.match(/<section class="section services"[\s\S]*?<\/section>/)[0];
 assert.ok(services.includes(feature), 'feature belongs in Capabilities');
-assert.ok(services.indexOf('FEATURED SERVICE / MANAGED IT') < services.indexOf('FEATURED PLATFORM / BACKFLOW OPERATIONS'), 'Managed IT feature must precede the backflow platform');
+assert.ok(services.indexOf('FEATURED SERVICE / MANAGED IT') < services.indexOf('02 / STRATAWORKS BACKFLOW OPERATIONS'), 'Managed IT feature must precede the backflow platform');
 assert.match(services, /href="managed-it-services\/">Need ongoing IT support\?/);
 assert.match(services, /Backflow Operations Platform/);
-assert.match(services, /href="backflow-operations-platform\/#demo">Request a Demo/);
+assert.match(services, /href="backflow-operations-platform\/#pricing">Lock in the \$300 rate/);
+assert.match(services, /href="backflow-operations-platform\/">Explore Backflow Operations/);
 assert.equal((services.match(/<article class="service-card /g) || []).length, 6);
 const footer = home.match(/<footer\b[\s\S]*?<\/footer>/)[0];
 assert.match(footer, /href="\/managed-it-services\/">Managed IT Services<\/a>/);
