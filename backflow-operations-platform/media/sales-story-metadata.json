@@ -1,0 +1,10 @@
+{
+  "duration_seconds": 82.1,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "voice_engine": "kokoro-onnx",
+  "voice_id": "am_michael",
+  "fictional_demo_data": true
+}
