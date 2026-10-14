@@ -159,3 +159,12 @@
   .story-page .tour-caption { gap: .2rem; }
 }
 @media (prefers-reduced-motion:reduce) { .story-page *, .story-page *::before, .story-page *::after { scroll-behavior: auto; transition: none; animation: none; } }
+
+.story-category { color: var(--cyan); font-size: .82rem; line-height: 1.6; margin: 0 0 1rem; letter-spacing: .015em; }
+.sales-lede strong { color: var(--paper); }
+.search-resources { background: #0e1b2a; }
+.resource-links { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 2rem; margin-top: 2rem; }
+.resource-links a { border-top: 1px solid #405772; padding-top: 1.2rem; line-height: 1.6; }
+.resource-links strong { display: block; color: var(--cyan); font-size: 1.1rem; text-decoration: underline; text-underline-offset: .25em; }
+.resource-links span { display: block; color: #b9cbdc; margin-top: .6rem; font-size: .95rem; }
+@media(max-width:760px) { .resource-links { grid-template-columns: 1fr; gap: 1.3rem; } }

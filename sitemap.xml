@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url><loc>https://strataworks.tech/</loc></url>
   <url><loc>https://strataworks.tech/services/it-consulting/</loc></url>
   <url><loc>https://strataworks.tech/services/networking/</loc></url>
   <url><loc>https://strataworks.tech/services/ai-automation/</loc></url>
   <url><loc>https://strataworks.tech/services/business-phone-systems/</loc></url>
   <url><loc>https://strataworks.tech/services/web-design/</loc></url>
-  <url><loc>https://strataworks.tech/backflow-operations-platform/</loc></url>
+  <url><loc>https://strataworks.tech/backflow-operations-platform/</loc><lastmod>2026-10-14</lastmod></url>
   <url><loc>https://strataworks.tech/managed-it-services/</loc></url>
+  <url><loc>https://strataworks.tech/backflow-operations-platform/report-submission/</loc><lastmod>2026-10-14</lastmod></url>
+  <url><loc>https://strataworks.tech/backflow-operations-platform/syncta-alternative/</loc><lastmod>2026-10-14</lastmod></url>
+  <url><loc>https://strataworks.tech/backflow-operations-platform/product-tour/</loc><lastmod>2026-10-14</lastmod>
+    <video:video><video:thumbnail_loc>https://strataworks.tech/backflow-operations-platform/media/sales-story-poster.jpg</video:thumbnail_loc><video:title>StrataWorks Backflow Operations: less evening paperwork</video:title><video:description>Field readings, configured reports, email submissions, and custom municipality forms. Demonstration footage uses fictional records.</video:description><video:content_loc>https://strataworks.tech/backflow-operations-platform/media/sales-story-web.mp4</video:content_loc><video:duration>82</video:duration></video:video>
+  </url>
 </urlset>

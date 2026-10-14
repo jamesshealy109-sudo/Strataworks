@@ -19,9 +19,6 @@ assert.match(platform, /<link rel="canonical" href="https:\/\/strataworks\.tech\
 assert.match(platform, /<h1[^>]*>[\s\S]*?Backflow Testing Software[\s\S]*?<\/h1>/i);
 assert.match(platform, /james@strataworks\.tech/);
 assert.match(platform, /formsubmit\.co\/james@strataworks\.tech/);
-assert.match(platform, /South Carolina/i);
-assert.match(platform, /North Carolina/i);
-assert.match(platform, /Georgia/i);
 assert.match(platform, /nationwide|national/i);
 assert.match(platform, /\(803\) 386-7728/);
 assert.match(platform, /tel:\+18033867728/);

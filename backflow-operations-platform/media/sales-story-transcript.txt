@@ -1,13 +1,17 @@
-Your last backflow test shouldn’t start a second shift.
+Your last backflow test shouldn't start a second shift.
 
-After a full day in the field, there are still forms to fill out, reports to prepare, and invoices to organize.
+After a day in the field, there are still forms to fill, reports to submit, and invoices to organize.
 
-StrataWorks Backflow Operations keeps your customers, assemblies, and test results connected.
+StrataWorks Backflow Operations keeps your customers, assemblies, and test results connected, from the field to the office.
 
-Record the results against the right assembly, then use that information to produce your supported report—reducing the manual form filling that follows you home.
+Record your readings, then use them to fill your configured report. Review the completed form without copying the same information again.
+
+We fill the report and submit it for you. Approved reports are sent through your configured email submission workflow.
 
 Keep scheduling, reports, and invoicing together, so your team can see what needs attention next.
 
-Spend less of your evening catching up on backflow paperwork.
+Built for teams nationwide, add your municipalities and custom forms. Configure each form and confirm the authority's submission requirements. Spend less of your evening catching up on backflow paperwork.
 
-Get started for $300 a month, including setup assistance and up to five staff logins.
+
+
+Get started for three hundred dollars per month, with setup assistance and up to five staff logins.
