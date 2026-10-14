@@ -2,11 +2,24 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { createHash } from 'node:crypto';
 
 const root = 'backflow-operations-platform';
 const routes = ['report-submission', 'syncta-alternative', 'product-tour'];
 const read = p => readFileSync(p, 'utf8');
 const graph = html => [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].flatMap(m => { const j = JSON.parse(m[1]); return j['@graph'] || [j]; });
+
+test('published media manifest matches the current sales video release', () => {
+  const manifest = JSON.parse(read(`${root}/media/manifest.json`));
+  const metadata = JSON.parse(read(`${root}/media/sales-story-metadata.json`));
+  assert.equal(manifest.sales_story.duration_seconds, metadata.duration_seconds);
+  assert.equal(manifest.sales_story.voice_engine, metadata.voice_engine);
+  for (const name of ['sales-story.mp4','sales-story-web.mp4','sales-story.vtt','sales-story-transcript.txt','sales-story-poster.jpg','sales-story-metadata.json']) {
+    const path = `${root}/media/${name}`;
+    const bytes = /\.(txt|vtt|json)$/.test(name) ? Buffer.from(read(path).replace(/\r\n/g, '\n')) : readFileSync(path);
+    assert.equal(manifest.sha256[name], createHash('sha256').update(bytes).digest('hex'), name);
+  }
+});
 
 test('search resources have unique canonicals, sitemap discovery, and working local links', () => {
   const canonicals = new Set();

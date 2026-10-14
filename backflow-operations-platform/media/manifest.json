@@ -61,23 +61,24 @@
     "review-report-transcript.txt": "9068d5ed6fe9043eb794616971b88dcaf90e3fe63cf4b8406d61a125db13828e",
     "review-report.mp4": "ca05b3a71aaf299bfe90c831af4b5d70b0ec562378791d41b856fdede3c33ddf",
     "review-report.vtt": "a1753d0032f11a682c530f1e4798251890e6cc6b6de45f76dbac047796776122",
-    "sales-story.mp4": "4ff4c59cafd78eaa3827c424f8f722d50f6332a365e57d6b9275f96696657320",
-    "sales-story-web.mp4": "16efea622a2399054090ebda249cf430d88be706a3ad31b58d52f5ca4076bf54",
-    "sales-story.vtt": "79f51c4050b7e2a28cd82c95dee44896066b039260387c465a8ff37b4827ef2f",
-    "sales-story-transcript.txt": "4c093476443eecaa684ff76b7bc2c837a8f34b6ed02b86deeafa59c572d2d435",
-    "sales-story-poster.jpg": "299499344526406aa030b3480562daac25ec0140634c628cd39fff00a1700af6",
+    "sales-story.mp4": "9a121a7fba5b2871a983b6d3ae2a015127d519cec7d2ab5fa6e5f7ca93d7cc59",
+    "sales-story-web.mp4": "94234082a7cedbb85cc591893c6562639d1deb8c332d55d708d11c9ddebbfc58",
+    "sales-story.vtt": "7c7eb4e0b1e76d5d665be45cc9493657a6383d9fe1ae10a2284bbd116033d774",
+    "sales-story-transcript.txt": "74f46682c953b58b60f71c1402bf12b22e657db1528c26bf1ef2e1c8888bb53a",
+    "sales-story-poster.jpg": "433d82858b582515512f01e6fe0743235f70d055bbcf2d8026501890e45fb1ff",
     "report-proof.webp": "d2d8b93e6cbc32b6d9cbaac4836ef8f190c10e02fd36d2f6186d73321283a804",
-    "report-proof-mobile.webp": "bfdb2434c235ebc37523f682636ce89fcbf90ea97114515c7b2aec5073331280"
+    "report-proof-mobile.webp": "bfdb2434c235ebc37523f682636ce89fcbf90ea97114515c7b2aec5073331280",
+    "sales-story-metadata.json": "7a28b78b6575b7154590557d22533c3a25eb236c39cdc12119179a240c163bce"
   },
-  "sales_story_release": "2026-10-14-first-cut",
+  "sales_story_release": "2026-10-14-submission-national",
   "sales_story": {
-    "duration_seconds": 63.0,
+    "duration_seconds": 82.1,
     "resolution": [
       1920,
       1080
     ],
-    "voice_engine": "orca",
-    "voice_id": "00e3d285aba44b27a83c47c02c9c2d9c",
+    "voice_engine": "kokoro-onnx",
+    "voice_id": "am_michael",
     "fictional_demo_data": true,
     "source": "product-tour.mp4",
     "source_sha256": "5a93c41c56ee52ad68b17f83d0a22334c5f21b0cb4469f5d12077eb177218a86",
@@ -92,51 +93,65 @@
         "start": 0,
         "end": 5.6,
         "source_voice_start": 0,
-        "source_voice_end": 3.92
+        "source_voice_end": 3.4693333333333336
       },
       {
         "index": 1,
         "start": 5.6,
         "end": 14.799999999999999,
-        "source_voice_start": 3.98,
-        "source_voice_end": 11.58
+        "source_voice_start": 3.4693333333333336,
+        "source_voice_end": 10.800666666666666
       },
       {
         "index": 2,
         "start": 14.799999999999999,
         "end": 24.1,
-        "source_voice_start": 11.65,
-        "source_voice_end": 18.8
+        "source_voice_start": 10.800666666666666,
+        "source_voice_end": 19.156
       },
       {
         "index": 3,
         "start": 24.1,
         "end": 38.2,
-        "source_voice_start": 18.85,
-        "source_voice_end": 29.25
+        "source_voice_start": 19.156,
+        "source_voice_end": 28.089333333333332
       },
       {
         "index": 4,
         "start": 38.2,
         "end": 46.6,
-        "source_voice_start": 29.3,
-        "source_voice_end": 35.85
+        "source_voice_start": 28.089333333333332,
+        "source_voice_end": 35.94533333333333
       },
       {
         "index": 5,
         "start": 46.6,
-        "end": 52.2,
-        "source_voice_start": 35.95,
-        "source_voice_end": 39.6
+        "end": 55.0,
+        "source_voice_start": 35.94533333333333,
+        "source_voice_end": 42.54866666666666
       },
       {
         "index": 6,
-        "start": 52.2,
-        "end": 63.0,
-        "source_voice_start": 39.65,
-        "source_voice_end": 47.307755102040815
+        "start": 55.0,
+        "end": 65.7,
+        "source_voice_start": 42.54866666666666,
+        "source_voice_end": 52.691291666666665
+      },
+      {
+        "index": 7,
+        "start": 65.7,
+        "end": 71.3,
+        "source_voice_start": 52.691291666666665,
+        "source_voice_end": 56.651291666666665
+      },
+      {
+        "index": 8,
+        "start": 71.3,
+        "end": 82.1,
+        "source_voice_start": 56.651291666666665,
+        "source_voice_end": 63.194625
       }
     ],
-    "cues": 14
+    "cues": 16
   }
 }
