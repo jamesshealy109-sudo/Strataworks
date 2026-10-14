@@ -95,3 +95,67 @@
 .sales-page .site-footer :is(p,a) { font-size: .85rem; }
 .sales-page .demo-form .form-note { text-transform: none; letter-spacing: normal; }
 @media(max-width:960px) { .sales-page .site-nav:not(.is-open) { visibility: hidden; } .sales-page .site-nav.is-open { visibility: visible; font-size: 1rem; } }
+
+
+/* Time-saving sales story: inherit StrataWorks lettering and palette. */
+@font-face { font-family: "Space Grotesk"; src: url("../assets/fonts/SpaceGrotesk.ttf") format("truetype"); font-style: normal; font-weight: 300 700; font-display: swap; }
+.story-page { font-family: "Space Grotesk", sans-serif; }
+.story-page ::selection { background: #58d5ff; color: #07101c; }
+.story-page { scrollbar-color: #526579 #07101c; }
+.story-page .site-header { background: #07101c; backdrop-filter: none; transition: background .25s ease; }
+.story-page .brand-mark { filter: none; }
+.story-page .brand-name { text-shadow: none; }
+.story-page .site-nav, .story-page .button, .story-page .site-footer { font-family: "Space Grotesk", sans-serif; }
+.story-hero { padding-top: calc(var(--header-h) + 4rem); padding-bottom: 5rem; grid-template-columns: minmax(0,.92fr) minmax(0,1.08fr); gap: clamp(2rem,4vw,5rem); }
+.story-hero h1 { color: var(--paper); font-size: clamp(3rem,5.2vw,5.1rem); font-weight: 650; line-height: 1.04; letter-spacing: -.035em; }
+.story-hero h1 em { color: var(--cyan); font-style: normal; }
+.story-hero h1 .sr-only { display: initial; margin: -1px; }
+.story-hero .sales-lede { font-size: clamp(1rem,1.3vw,1.14rem); margin: 1.5rem 0; max-width: 48ch; }
+.story-hero .hero-actions { gap: .6rem 1.2rem; align-items: center; }
+.story-page .button { font-size: .88rem; text-transform: none; letter-spacing: 0; min-height: 48px; padding: 1rem 1.3rem; }
+.story-hero video { aspect-ratio: 16/9; border-radius: 12px; }
+.story-page .tour-player { scroll-margin-top: calc(var(--header-h) + 1.25rem); }
+.story-hero .sales-hero-note { font-size: .86rem; }
+.story-page .tour-caption { font-size: .88rem; }
+.story-page .media-note { font-size: .78rem; }
+.story-proof { background: var(--paper); color: var(--ink); }
+.story-page .story-proof .section-heading { grid-template-columns: 1.15fr .85fr; margin-bottom: 2.5rem; }
+.story-proof .section-heading p { font-size: 1.08rem; line-height: 1.75; }
+.report-proof { margin: 0; }
+.report-proof img { width: 100%; height: auto; border: 1px solid #b8c4c8; border-radius: 12px; }
+.report-proof figcaption { margin: 1rem 0 0; font-size: .88rem; line-height: 1.65; max-width: 85ch; color: #455362; }
+.story-benefits { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 3rem; margin-top: 3rem; }
+.story-benefits > div { border-top: 1px solid #aebcc2; padding-top: 1.5rem; }
+.story-benefits h3 { font-size: 1.35rem; margin: 0 0 .8rem; }
+.story-benefits p { color: #455362; line-height: 1.7; margin: 0; }
+.story-page .story-proof .jurisdiction-note { color: #455362; border-color: #aebcc2; }
+.story-proof .jurisdiction-note a { color: #075b70; }
+.story-page .sales-pricing { background: #dcebf0; }
+.story-page .pricing-intro > p { font-size: 1.1rem; line-height: 1.75; max-width: 45ch; }
+.story-page .pricing-intro > .inline-link { color: #075b70; }
+.story-page .launch-plan { background: var(--paper); }
+.story-page .launch-plan .plan-price { margin-top: 1.5rem; }
+.story-page .platform-faq { display: grid; background: var(--paper); color: var(--ink); gap: 4rem; }
+.story-page .platform-faq-list summary { padding-block: .35rem; }
+.story-page .platform-faq-list a { color: #075b70; }
+.story-page :is(.demo-form input,.demo-form select,.demo-form textarea) { caret-color: var(--cyan); border-radius: 6px; }
+.story-page .site-footer :is(p,a) { text-transform: none; letter-spacing: 0; color: #b9cbdc; }
+.story-page :is(.story-proof,.sales-pricing,.platform-faq) :is(a,button,summary):focus-visible { outline-color: #075b70; }
+.story-page a:hover { text-decoration-thickness: 2px; }
+@media (max-width:1080px) {
+  .story-hero { grid-template-columns: 1fr; gap: 2rem; padding-top: calc(var(--header-h) + 2.5rem); }
+  .story-hero h1 { font-size: clamp(3.2rem,7vw,4.7rem); }
+  .story-hero .sales-lede { max-width: 65ch; }
+  .story-hero .tour-player { width: 100%; }
+}
+@media (max-width:760px) {
+  .story-hero { padding-bottom: 3rem; }
+  .story-hero h1 { font-size: clamp(2.9rem,10vw,4.1rem); }
+  .story-hero .hero-actions { align-items: flex-start; flex-direction: column; }
+  .story-hero .hero-actions .button { width: auto; }
+  .story-page .story-proof .section-heading, .story-benefits, .story-page .platform-faq { grid-template-columns: 1fr; gap: 1.6rem; }
+  .story-benefits { margin-top: 2rem; }
+  .report-proof img { width: 100%; }
+  .story-page .tour-caption { gap: .2rem; }
+}
+@media (prefers-reduced-motion:reduce) { .story-page *, .story-page *::before, .story-page *::after { scroll-behavior: auto; transition: none; animation: none; } }

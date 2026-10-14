@@ -16,7 +16,7 @@ assert.match(home, /base rate guaranteed for 60 months/i, 'second homepage space
 const platform = read('backflow-operations-platform/index.html');
 
 assert.match(platform, /<link rel="canonical" href="https:\/\/strataworks\.tech\/backflow-operations-platform\/">/);
-assert.match(platform, /<h1[^>]*>[^<]*Backflow Testing Software/i);
+assert.match(platform, /<h1[^>]*>[\s\S]*?Backflow Testing Software[\s\S]*?<\/h1>/i);
 assert.match(platform, /james@strataworks\.tech/);
 assert.match(platform, /formsubmit\.co\/james@strataworks\.tech/);
 assert.match(platform, /South Carolina/i);
@@ -28,13 +28,12 @@ assert.match(platform, /tel:\+18033867728/);
 assert.match(platform, /up to five staff logins/i);
 assert.match(platform, /60 months/i);
 assert.match(platform, /Limited spots remaining/i);
-assert.match(platform, /<s>\$399\.99\/mo<\/s>/, 'future price must be visibly crossed out');
-assert.match(platform, /<s>\$495\/mo<\/s>/, 'annual-billed competitor equivalent must be visibly crossed out');
-assert.match(platform, /<s>\$625\/mo<\/s>/, 'monthly competitor rate must be visibly crossed out');
 assert.match(platform, /Lock in the \$300 rate/i);
 assert.match(sitemap, /https:\/\/strataworks\.tech\/backflow-operations-platform\//);
 
 const forbidden = [
+  /\bBSI\b|SwiftComply/i,
+  /saves? (?:you )?\d+ hours/i,
   /guaranteed savings/i,
   /99\.9% uptime/i,
   /SOC 2/i,
