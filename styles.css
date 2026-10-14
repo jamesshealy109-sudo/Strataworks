@@ -343,7 +343,7 @@ button { font: inherit; }
 @media (max-width: 760px) {
   .featured-platform .featured-platform-desktop-details,
   .featured-platform .featured-platform-desktop-action,
-  .featured-platform .featured-platform-ui { display: none; }
+  .featured-platform[aria-labelledby="featured-platform-title"] .featured-platform-ui { display: none; }
   .featured-platform .featured-platform-mobile-copy { display: block; }
   .featured-platform .featured-platform-mobile-action { display: inline-flex; align-items: center; gap: .7rem; text-transform: none; letter-spacing: 0; font-family: "Space Grotesk", sans-serif; font-size: .95rem; }
   .featured-platform .featured-platform-mobile-action svg { flex: 0 0 auto; }
