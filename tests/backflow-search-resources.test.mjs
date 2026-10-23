@@ -21,6 +21,12 @@ test('published media manifest matches the current sales video release', () => {
   }
 });
 
+test('video posters use a fresh asset URL after the 82-second release', () => {
+  for (const path of [`${root}/index.html`, `${root}/product-tour/index.html`]) {
+    assert.match(read(path), /poster="[^"]*sales-story-poster\.jpg\?v=82s"/, path);
+  }
+});
+
 test('search resources have unique canonicals, sitemap discovery, and working local links', () => {
   const canonicals = new Set();
   for (const route of routes) {
