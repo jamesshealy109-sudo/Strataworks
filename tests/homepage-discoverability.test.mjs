@@ -21,7 +21,7 @@ assert.ok(services.includes(feature), 'feature belongs in Capabilities');
 assert.ok(services.indexOf('FEATURED SERVICE / MANAGED IT') < services.indexOf('02 / STRATAWORKS BACKFLOW OPERATIONS'), 'Managed IT feature must precede the backflow platform');
 assert.match(services, /href="managed-it-services\/">Need ongoing IT support\?/);
 assert.match(services, /Backflow Operations Platform/);
-assert.match(services, /href="backflow-operations-platform\/#pricing">Lock in the \$300 rate/);
+assert.match(services, /href="backflow-operations-platform\/#workflow">See the workflow/);
 assert.match(services, /href="backflow-operations-platform\/">Explore Backflow Operations/);
 assert.equal((services.match(/<article class="service-card /g) || []).length, 6);
 const footer = home.match(/<footer\b[\s\S]*?<\/footer>/)[0];
