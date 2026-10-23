@@ -168,3 +168,50 @@
 .resource-links strong { display: block; color: var(--cyan); font-size: 1.1rem; text-decoration: underline; text-underline-offset: .25em; }
 .resource-links span { display: block; color: #b9cbdc; margin-top: .6rem; font-size: .95rem; }
 @media(max-width:760px) { .resource-links { grid-template-columns: 1fr; gap: 1.3rem; } }
+
+/* Show the whole job as a sequence of real product screens. */
+.story-page #workflow { scroll-margin-top: calc(var(--header-h) + 1rem); }
+.capability-intro { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,.9fr); align-items: end; gap: clamp(2rem,5vw,6rem); }
+.capability-intro h2 { margin: 0; }
+.capability-intro > p { color: #455362; line-height: 1.7; font-size: 1.08rem; margin: 0; }
+.workflow-path { display: flex; flex-wrap: wrap; gap: .65rem 1.4rem; padding: 1.5rem 0 2rem; margin: 2rem 0 0; list-style: none; border-top: 1px solid #aebcc2; color: #075b70; font-weight: 700; font-size: .9rem; }
+.workflow-path li + li::before { content: "→"; margin-right: 1.4rem; color: #5c6c77; font-weight: 400; }
+.workflow-steps { list-style: none; margin: 0; padding: 0; }
+.workflow-step { display: grid; grid-template-columns: minmax(0,.82fr) minmax(0,1.18fr); align-items: center; gap: clamp(2rem,5vw,6rem); padding: clamp(2.5rem,5vw,5rem) 0; border-top: 1px solid #aebcc2; }
+.workflow-step:nth-child(even) { grid-template-columns: minmax(0,1.18fr) minmax(0,.82fr); }
+.workflow-step:nth-child(even) .workflow-copy { grid-column: 2; grid-row: 1; }
+.workflow-step:nth-child(even) .workflow-visual { grid-column: 1; grid-row: 1; }
+.workflow-copy h3 { display: flex; gap: 1.1rem; align-items: baseline; font-size: clamp(1.65rem,2.35vw,2.6rem); line-height: 1.12; margin: 0 0 1.3rem; }
+.workflow-copy h3 span { color: #075b70; font-size: .95rem; font-weight: 700; font-variant-numeric: tabular-nums; flex: 0 0 auto; }
+.workflow-copy > p { color: #334a5c; line-height: 1.75; margin: 0 0 1rem; }
+.workflow-copy .workflow-payoff { border-top: 1px solid #aebcc2; padding-top: 1rem; margin-top: 1.5rem; color: #075b70; font-weight: 700; }
+.workflow-visual { margin: 0; min-width: 0; }
+.workflow-visual img { width: 100%; height: auto; aspect-ratio: 8 / 5; object-fit: contain; display: block; border: 1px solid #aebcc2; border-radius: 12px; background: #e7edf0; }
+.workflow-visual figcaption { color: #455362; font-size: .82rem; line-height: 1.6; margin-top: .7rem; }
+.workflow-visual-phone { max-width: 480px; }
+.workflow-visual-phone img { height: clamp(360px,40vw,480px); aspect-ratio: auto; object-fit: cover; }
+.workflow-proof-note { color: #455362; font-size: .83rem; line-height: 1.65; padding-top: 1rem; border-top: 1px solid #aebcc2; max-width: 80ch; }
+.workflow-next { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; background: #dcebf0; border-radius: 12px; padding: clamp(1.5rem,3vw,2.5rem); margin-top: 2.5rem; }
+.workflow-next p { color: var(--ink); font-size: clamp(1.1rem,1.6vw,1.5rem); font-weight: 700; margin: 0; }
+.workflow-next .button { white-space: nowrap; }
+.capability-continuity { background: #0e1b2a; color: var(--paper); }
+.capability-continuity .capability-intro > p { color: #b9cbdc; }
+.continuity-list { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: clamp(1.5rem,3vw,3rem); margin-top: 3rem; }
+.continuity-list > div { border-top: 1px solid #526579; padding-top: 1.3rem; }
+.continuity-list h3 { font-size: clamp(1.2rem,1.5vw,1.55rem); margin: 0 0 .8rem; }
+.continuity-list p { color: #b9cbdc; line-height: 1.7; margin: 0; }
+.story-page .capability-continuity .jurisdiction-note { color: #b9cbdc; border-color: #526579; }
+@media(max-width:900px) {
+  .capability-intro, .workflow-step, .workflow-step:nth-child(even), .continuity-list { grid-template-columns: 1fr; }
+  .workflow-step:nth-child(even) .workflow-copy, .workflow-step:nth-child(even) .workflow-visual { grid-column: auto; grid-row: auto; }
+  .workflow-step { gap: 1.7rem; }
+}
+@media(max-width:600px) {
+  .workflow-path { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 0; font-size: .72rem; text-align: center; }
+  .workflow-path li { padding-inline: .2rem; border-right: 1px solid #aebcc2; }
+  .workflow-path li:last-child { border-right: 0; }
+  .workflow-path li + li::before { display: none; }
+  .workflow-copy h3 { gap: .75rem; }
+  .workflow-next { display: block; }
+  .workflow-next .button { width: 100%; margin-top: 1.1rem; white-space: normal; }
+}

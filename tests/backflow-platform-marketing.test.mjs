@@ -9,7 +9,7 @@ const sitemap = read('sitemap.xml');
 assert.match(home, /href="backflow-operations-platform\//, 'homepage must link to platform landing page');
 assert.match(home, /Backflow Operations Platform/i, 'homepage must name the platform');
 assert.match(home, /Explore Backflow Operations/i, 'second homepage space must link to the platform');
-assert.match(home, /href="backflow-operations-platform\/#pricing"/, 'second homepage space must link to platform pricing');
+assert.match(home, /href="backflow-operations-platform\/#workflow"/, 'second homepage space must lead into the product workflow');
 assert.ok(home.indexOf('FEATURED SERVICE / MANAGED IT') < home.indexOf('02 / STRATAWORKS BACKFLOW OPERATIONS'), 'StrataWorks managed IT must lead before the Backflow Operations space');
 assert.match(home, /base rate guaranteed for 60 months/i, 'second homepage space must explain the rate guarantee');
 
