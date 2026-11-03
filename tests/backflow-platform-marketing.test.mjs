@@ -10,7 +10,7 @@ assert.match(home, /href="backflow-operations-platform\//, 'homepage must link t
 assert.match(home, /Backflow Operations Platform/i, 'homepage must name the platform');
 assert.match(home, /Explore Backflow Operations/i, 'second homepage space must link to the platform');
 assert.match(home, /href="backflow-operations-platform\/#workflow"/, 'second homepage space must lead into the product workflow');
-assert.ok(home.indexOf('FEATURED SERVICE / MANAGED IT') < home.indexOf('02 / STRATAWORKS BACKFLOW OPERATIONS'), 'StrataWorks managed IT must lead before the Backflow Operations space');
+assert.ok(home.indexOf('Featured service / Managed IT') < home.indexOf('02 / StrataWorks Backflow Operations'), 'StrataWorks managed IT must lead before the Backflow Operations space');
 assert.match(home, /base rate guaranteed for 60 months/i, 'second homepage space must explain the rate guarantee');
 
 const platform = read('backflow-operations-platform/index.html');

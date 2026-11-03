@@ -15,6 +15,10 @@ Implements the website portion of [growth plan PR #3](https://github.com/jamessh
 - Supported forms vary by jurisdiction. Customers with unusual requirements should confirm fit before subscribing.
 - The optional personal walkthrough is still available.
 
+## Site copy
+
+Site-wide copy is no longer uppercased with CSS. Words like "Managed IT" read differently in all caps, so text displays exactly as written in the HTML.
+
 ## Checkout connection
 
 Public Payment Link: https://buy.stripe.com/8x2dR86jW3fYdrMg8g14400
@@ -57,6 +61,13 @@ Rebuild with:
 ```powershell
 python scripts/build-backflow-sales-media.py --source PATH_TO_NARRATED_EXPORT --ffmpeg PATH_TO_FFMPEG
 ```
+
+The How it works screenshots are captured from the current app rather than taken from video frames. That way they stay sharp and carry no subtitles or tutorial callouts. From the product repo, run:
+```bash
+cd ../backflow-operations-platform
+.venv/bin/python ../Strataworks/scripts/capture-backflow-screenshots.py
+```
+The script boots the product's disposable demo environment (fictional data, network blocked) and captures at 2× with Playwright. It writes WebP files into `backflow-operations-platform/media/`. Only the submission-queue shot carries a highlight, around the row being approved. Check every image before publishing.
 
 The builder does not record against a live customer environment. The manifest records source release, chapter timestamps, durations and SHA-256 hashes. For later recording updates, use the existing disposable demo-video workflow and review substantive changes before replacing public media.
 

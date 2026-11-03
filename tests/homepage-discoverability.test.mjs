@@ -11,14 +11,14 @@ assert.match(home, /Practical, ongoing IT support for teams of 1–15 employees 
 assert.match(home, /href="#contact">Discuss Your IT Needs/);
 assert.match(home, /<a class="text-link" href="\/managed-it-services\/">Explore Managed IT/);
 assert.match(home, /<nav[^>]*id="site-nav"[\s\S]*href="\/managed-it-services\/">Managed IT/);
-assert.match(feature, /FEATURED SERVICE \/ MANAGED IT/);
+assert.match(feature, /Featured service \/ Managed IT/);
 assert.match(feature, /<h3 id="featured-managed-it-title">Your IT department, without the full-time overhead\.<\/h3>/);
 assert.match(feature, /href="\/managed-it-services\/">Explore Managed IT/);
 assert.match(feature, /href="\/managed-it-services\/#consultation">Talk With StrataWorks/);
 assert.match(readFileSync('managed-it-services/index.html', 'utf8'), /id="consultation"/);
 const services = home.match(/<section class="section services"[\s\S]*?<\/section>/)[0];
 assert.ok(services.includes(feature), 'feature belongs in Capabilities');
-assert.ok(services.indexOf('FEATURED SERVICE / MANAGED IT') < services.indexOf('02 / STRATAWORKS BACKFLOW OPERATIONS'), 'Managed IT feature must precede the backflow platform');
+assert.ok(services.indexOf('Featured service / Managed IT') < services.indexOf('02 / StrataWorks Backflow Operations'), 'Managed IT feature must precede the backflow platform');
 assert.match(services, /href="managed-it-services\/">Need ongoing IT support\?/);
 assert.match(services, /Backflow Operations Platform/);
 assert.match(services, /href="backflow-operations-platform\/#workflow">See the workflow/);

@@ -39,7 +39,7 @@ const clock = document.querySelector('#system-time');
 const updateClock = () => {
   if (!clock) return;
   const now = new Date();
-  clock.textContent = `${now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' })} / ONLINE`;
+  clock.textContent = `${now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' })} / Online`;
 };
 updateClock();
 setInterval(updateClock, 1000);

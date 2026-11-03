@@ -189,7 +189,7 @@
 .workflow-visual img { width: 100%; height: auto; aspect-ratio: 8 / 5; object-fit: contain; display: block; border: 1px solid #aebcc2; border-radius: 12px; background: #e7edf0; }
 .workflow-visual figcaption { color: #455362; font-size: .82rem; line-height: 1.6; margin-top: .7rem; }
 .workflow-visual-phone { max-width: 480px; }
-.workflow-visual-phone img { height: clamp(360px,40vw,480px); aspect-ratio: auto; object-fit: cover; }
+.workflow-visual-phone img { width: auto; max-width: 100%; height: clamp(420px,46vw,620px); aspect-ratio: auto; margin-inline: auto; background: #f4f6f8; }
 .workflow-proof-note { color: #455362; font-size: .83rem; line-height: 1.65; padding-top: 1rem; border-top: 1px solid #aebcc2; max-width: 80ch; }
 .workflow-next { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; background: #dcebf0; border-radius: 12px; padding: clamp(1.5rem,3vw,2.5rem); margin-top: 2.5rem; }
 .workflow-next p { color: var(--ink); font-size: clamp(1.1rem,1.6vw,1.5rem); font-weight: 700; margin: 0; }
@@ -215,3 +215,5 @@
   .workflow-next { display: block; }
   .workflow-next .button { width: 100%; margin-top: 1.1rem; white-space: normal; }
 }
+
+.workflow-visual picture img { aspect-ratio: auto; }
