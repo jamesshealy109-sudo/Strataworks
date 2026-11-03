@@ -9,14 +9,15 @@ const sitemap = read('sitemap.xml');
 assert.match(home, /href="backflow-operations-platform\//, 'homepage must link to platform landing page');
 assert.match(home, /Backflow Operations Platform/i, 'homepage must name the platform');
 assert.match(home, /Explore Backflow Operations/i, 'second homepage space must link to the platform');
-assert.match(home, /href="backflow-operations-platform\/#workflow"/, 'second homepage space must lead into the product workflow');
-assert.ok(home.indexOf('FEATURED SERVICE / MANAGED IT') < home.indexOf('02 / STRATAWORKS BACKFLOW OPERATIONS'), 'StrataWorks managed IT must lead before the Backflow Operations space');
+assert.match(home, /href="backflow-operations-platform\/how-it-works\/"/, 'second homepage space must lead into the product workflow');
+assert.ok(home.indexOf('Featured service / Managed IT') < home.indexOf('02 / StrataWorks Backflow Operations'), 'StrataWorks managed IT must lead before the Backflow Operations space');
 assert.match(home, /base rate guaranteed for 60 months/i, 'second homepage space must explain the rate guarantee');
 
-const platform = read('backflow-operations-platform/index.html');
+const overview = read('backflow-operations-platform/index.html');
+const platform = ['', 'how-it-works/', 'pricing/', 'faq/', 'contact/'].map(p => read(`backflow-operations-platform/${p}index.html`)).join('\n');
 
-assert.match(platform, /<link rel="canonical" href="https:\/\/strataworks\.tech\/backflow-operations-platform\/">/);
-assert.match(platform, /<h1[^>]*>[\s\S]*?Backflow Testing Software[\s\S]*?<\/h1>/i);
+assert.match(overview, /<link rel="canonical" href="https:\/\/strataworks\.tech\/backflow-operations-platform\/">/);
+assert.match(overview, /<h1[^>]*>[\s\S]*?Backflow Testing Software[\s\S]*?<\/h1>/i);
 assert.match(platform, /james@strataworks\.tech/);
 assert.match(platform, /formsubmit\.co\/james@strataworks\.tech/);
 assert.match(platform, /nationwide|national/i);

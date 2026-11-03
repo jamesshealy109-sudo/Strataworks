@@ -6,7 +6,7 @@
 .platform-breadcrumb { margin: 0 0 3rem; font: .65rem/1.6 "IBM Plex Mono", monospace; color: var(--muted); }
 .platform-breadcrumb a { text-decoration: underline; text-underline-offset: 4px; }
 .platform-hero .kicker, .platform-workflow .kicker, .platform-audience .kicker, .demo-section .kicker { color: var(--cyan); }
-.platform-hero h1 { max-width: 1300px; margin: 0; font-size: clamp(3.05rem, 7.3vw, 7.4rem); line-height: .98; letter-spacing: -.065em; text-transform: uppercase; }
+.platform-hero h1 { max-width: 1300px; margin: 0; font-size: clamp(3.05rem, 7.3vw, 7.4rem); line-height: .98; letter-spacing: -.065em; }
 .platform-hero h1 span { color: var(--cyan); }
 .platform-hero-bottom { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, .8fr); align-items: end; gap: clamp(2rem, 6vw, 6rem); margin-top: 3rem; }
 .platform-lede { max-width: 710px; margin: 0 0 2rem; font-size: clamp(1.05rem, 1.5vw, 1.3rem); line-height: 1.65; color: #bac7d5; }
@@ -18,7 +18,7 @@
 .platform-record small { display: block; margin-top: .7rem; }
 .platform-availability { margin: 3rem 0 0; padding: 1.4rem 0; border-top: 1px solid var(--line); color: #becbd8; font: .7rem/1.7 "IBM Plex Mono", monospace; }
 .platform-section { padding: clamp(4rem, 7vw, 7rem) var(--pad); }
-.platform-section h2 { margin: 0; max-width: 950px; font-size: clamp(2.3rem, 4.8vw, 5rem); line-height: 1; letter-spacing: -.055em; text-transform: uppercase; }
+.platform-section :is(h2, h1) { margin: 0; max-width: 950px; font-size: clamp(2.3rem, 4.8vw, 5rem); line-height: 1; letter-spacing: -.055em; }
 .platform-section p { line-height: 1.7; }
 .platform-section .kicker { line-height: 1.5; }
 .platform-problem, .regional-focus, .platform-faq { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2.5rem, 6vw, 6rem); background: var(--paper); color: var(--ink); }
@@ -66,7 +66,7 @@
   .platform-hero-bottom { grid-template-columns: 1.2fr 1fr; gap: 2rem; }
   .platform-hero .hero-actions { gap: 1.5rem; }
   .demo-section { grid-template-columns: 1fr; }
-  .demo-intro h2 { max-width: 750px; }
+  .demo-intro :is(h2, h1) { max-width: 750px; }
 }
 @media (max-width: 760px) {
   .platform-hero { padding-top: calc(var(--header-h) + 2rem); }

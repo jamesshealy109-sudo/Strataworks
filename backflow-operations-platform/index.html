@@ -72,12 +72,11 @@
 }</script>
 
   <link rel="icon" href="/assets/strataworks-logo.png">
-  <link rel="stylesheet" href="/styles.css?v=backflow1">
-  <link rel="stylesheet" href="platform.css">
-  <script defer src="/script.js"></script>
-  <script type="module" src="funnel.mjs"></script>
-  <script type="module" src="sales-story.mjs"></script>
-<link rel="stylesheet" href="sales.css?v=capability2">
+  <link rel="stylesheet" href="/styles.css?v=pages1">
+  <link rel="stylesheet" href="platform.css?v=pages1">
+  <link rel="stylesheet" href="sales.css?v=pages1">
+  <script defer src="/script.js?v=pages1"></script>
+  <script type="module" src="sales-story.mjs?v=pages1"></script>
 </head>
 <body class="platform-page sales-page story-page">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -91,10 +90,12 @@
       <span class="sr-only">Toggle navigation</span>
     </button>
     <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-      <a href="#workflow">How it works</a>
+      <a href="/backflow-operations-platform/" aria-current="page">Overview</a>
+      <a href="/backflow-operations-platform/how-it-works/">How it works</a>
+      <a href="/backflow-operations-platform/faq/">FAQ</a>
+      <a href="/backflow-operations-platform/contact/">Contact</a>
       <a href="/managed-it-services/">Managed IT</a>
-      <a href="#faq">Questions</a>
-      <a class="nav-cta" href="#pricing">See pricing <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="nav-cta" href="/backflow-operations-platform/pricing/">See pricing <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </nav>
   </header>
 <main id="main">
@@ -102,11 +103,11 @@
   <div class="sales-hero-copy">
     <h1>Every backflow job.<br><em>From schedule to payment.</em><span class="sr-only"> Backflow Testing Software</span></h1>
     <p class="sales-lede"><strong>One place for the whole job.</strong> Schedule tests, give technicians their routes, record readings on a phone, prepare and send approved reports, and keep invoices tied to the work. Leave the second shift of paperwork behind.</p>
-    <div class="hero-actions"><a class="button button-primary" href="#workflow">See the full workflow</a><a class="inline-link" href="#tour-player">Watch the 82-second story</a></div>
+    <div class="hero-actions"><a class="button button-primary" href="/backflow-operations-platform/how-it-works/">See the full workflow</a><a class="inline-link" href="#tour-player">Watch the 82-second story</a></div>
     <p class="sales-hero-note">Built for the owner in the field and the office keeping every job moving.<br>The $300/month plan includes setup assistance and up to five staff logins.</p>
   </div>
   <div class="tour-player" id="tour-player">
-    <video id="sales-video" controls playsinline preload="none" poster="media/sales-story-poster.jpg?v=82s" aria-label="Less evening paperwork: Backflow Operations sales video" tabindex="0">
+    <video id="sales-video" controls playsinline preload="metadata" poster="media/sales-story-poster.jpg?v=82s" aria-label="Less evening paperwork: Backflow Operations sales video" tabindex="0">
       <source src="media/sales-story-web.mp4" type="video/mp4">
       <track kind="captions" src="media/sales-story.vtt" srclang="en" label="English" default>
       <p><a href="media/sales-story.mp4">Download the sales video</a></p>
@@ -118,109 +119,7 @@
 <section class="story-proof platform-section capability-story" id="workflow" aria-labelledby="workflow-title">
   <div class="capability-intro"><h2 id="workflow-title">The entire job.<br>One connected record.</h2><p>Backflow work is more than filling out a report. See how a customer, an assembly, a field test, an approved form, and an invoice stay connected from start to finish.</p></div>
   <ol class="workflow-path" aria-label="Backflow job stages"><li>Plan</li><li>Test</li><li>Review</li><li>Invoice</li><li>Submit</li></ol>
-  <ol class="workflow-steps">
-    <li class="workflow-step">
-      <div class="workflow-copy"><h3><span>1</span> Plan the work and the route</h3><p>Keep customers, service locations, and assemblies together. Schedule the test, assign a technician and gauge, and put the stop on a route.</p><p class="workflow-payoff">The field team knows where to go and which device needs testing.</p></div>
-      <figure class="workflow-visual"><img src="media/story-schedule.jpg" alt="Fictional scheduling screen showing customer, assembly, assigned tester, gauge, municipality, and appointment time." width="640" height="400" loading="lazy"><figcaption>Schedule a test with the job details in view.</figcaption></figure>
-    </li>
-    <li class="workflow-step">
-      <div class="workflow-copy"><h3><span>2</span> Record the test in the field</h3><p>Open assigned work on a phone, enter readings against the right assembly, add notes or photos when needed, and save a draft before sending it for office review.</p><p class="workflow-payoff">Readings and context reach the office with the job.</p></div>
-      <figure class="workflow-visual workflow-visual-phone"><img src="media/story-field-test.jpg" alt="Fictional phone-sized field test screen with backflow readings and a save-draft action." width="640" height="400" loading="lazy"><figcaption>Field testing fits a phone-sized screen.</figcaption></figure>
-    </li>
-    <li class="workflow-step">
-      <div class="workflow-copy"><h3><span>3</span> Turn readings into a reviewed report</h3><p>Office staff review the submitted test, check the configured authority form, and approve the resulting PDF. The customer, assembly, tester, and readings remain tied to the record.</p><p class="workflow-payoff">Less copying the same readings onto another form.</p></div>
-      <figure class="workflow-visual"><img src="media/report-proof.webp" alt="Fictional field readings of 5.2, 2.1, and 2.8 appear in the matching populated training report." width="1400" height="780" loading="lazy"><figcaption>Illustrative training form. Live forms require mapping and review.</figcaption></figure>
-    </li>
-    <li class="workflow-step">
-      <div class="workflow-copy"><h3><span>4</span> Invoice the work and see what is owed</h3><p>Create an invoice linked to the customer, location, and approved test. Issue it, track its balance, and record payment without losing the path back to the completed job.</p><p class="workflow-payoff">The office can see the work behind every balance.</p></div>
-      <figure class="workflow-visual"><img src="media/story-invoice.jpg" alt="Fictional invoice screen showing a linked test, service line, amount due, and invoice actions." width="640" height="400" loading="lazy"><figcaption>Invoice and test history stay connected.</figcaption></figure>
-    </li>
-    <li class="workflow-step">
-      <div class="workflow-copy"><h3><span>5</span> Prepare and send the approved form</h3><p>Eligible reports move through a municipality submission queue. After the required review and payment checks, approved reports can be emailed through your configured submission workflow, with delivery history kept alongside the job.</p><p class="workflow-payoff">A sent email is visible; the authority's acceptance still needs confirmation.</p></div>
-      <figure class="workflow-visual"><img src="media/story-submission.jpg" alt="Fictional municipality submission queue showing a test draft, payment state, and approval actions." width="640" height="400" loading="lazy"><figcaption>Review the draft before it enters the email queue.</figcaption></figure>
-    </li>
-  </ol>
-  <p class="workflow-proof-note">Screens show the actual platform with fictional demonstration records. Municipality forms must be configured and checked before live use.</p>
-  <div class="workflow-next"><p>Ready to put the whole workflow in one place?</p><a class="button button-primary" href="#pricing">See the $300 plan</a></div>
-</section>
-<section class="capability-continuity platform-section" id="features" aria-labelledby="continuity-title">
-  <div class="capability-intro"><h2 id="continuity-title">The next job starts<br>with what you know.</h2><p>Keep the work around each test in the same workspace, so the next appointment does not begin with a search through paper, inboxes, and spreadsheets.</p></div>
-  <div class="continuity-list">
-    <div><h3>Customer and assembly history</h3><p>Find service locations, account details, prior tests, invoices, and assembly records when a customer calls or a device comes due.</p></div>
-    <div><h3>Renewal follow-up</h3><p>Use device due dates to prepare monthly renewal reminders. Review and approve batches before messages are queued.</p></div>
-    <div><h3>A practical move from your old system</h3><p>Bring in customers through the verified Jobber CSV import workflow. We scope other imports and new municipality forms with you before setup.</p></div>
-  </div>
-  <p class="jurisdiction-note">Available for teams nationwide. Add municipalities and custom forms, then confirm each authority's current form, recipient, and accepted submission method. Portal requirements need a separate review. <a href="report-submission/">How report submission works</a>.</p>
-</section>
-<section class="sales-pricing platform-section" id="pricing">
-  <div class="pricing-intro"><h2>Put the cost beside<br>the time you spend.</h2><p>How much of your evening goes into filling forms and organizing completed work? For $300/month, give your team one connected workspace for scheduling, field testing, configured reports, invoicing, and email submissions, with help getting set up.</p><a class="inline-link" href="#demo">Want to talk with us first? <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-  <div class="launch-plan">
-    <h3>StrataWorks Backflow Operations</h3>
-    <p class="plan-price"><strong>$300</strong><span>per month</span></p>
-    <p class="plan-seats">Includes up to five staff logins.</p>
-    <p class="plan-guarantee"><strong>Lock in the $300 monthly base rate for 60 months</strong> while your subscription stays continuously active.</p>
-    <p class="plan-availability">Limited spots remaining at the $300 rate.</p>
-    <ul class="plan-inclusions">
-      <li>Customer, location, and assembly records</li>
-      <li>Scheduling, routing, field testing, and test history</li>
-      <li>Custom municipality forms and configured email submissions</li>
-      <li>Invoicing, receivables, and payment workflows</li>
-      <li>Office and field roles</li>
-      <li>Setup assistance and the tutorial library</li>
-    </ul>
-    <a class="button button-primary" data-subscribe hidden href="#pricing" target="_blank" rel="noopener">Lock in the $300 rate <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    <div data-checkout-pending class="checkout-pending"><p>Online signup is opening soon. Contact us to arrange your setup.</p><a class="button button-primary" href="#demo">Ask to lock in $300 <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-    <noscript><p>Contact <a href="mailto:james@strataworks.tech">james@strataworks.tech</a> to subscribe.</p></noscript>
-    <p class="plan-fine-print">Checkout opens in a new tab. After payment, return here and <a href="setup/">send your company setup details</a>.</p>
-    <p class="plan-timing">Standard setup is ready within three business days after payment and completed setup details.</p>
-    <p class="plan-fine-print">Your first monthly payment is collected at checkout. Applicable tax is calculated by Stripe. Custom imports, new forms, and optional provider services are scoped separately before work begins.</p>
-  </div>
-</section>
-<section class="sales-onboarding platform-section" id="setup">
-  <h2>What happens after you subscribe?</h2>
-  <ol class="setup-steps">
-    <li><span>1</span><div><h3>Send your setup details</h3><p>Company information, staff email addresses, municipalities, and your current data source. No consultation is required for standard setup.</p></div></li>
-    <li><span>2</span><div><h3>We prepare your workspace</h3><p>We verify the subscription and configure your company access. Standard setup takes up to three business days once payment and details are complete.</p></div></li>
-    <li><span>3</span><div><h3>Sign in and start working</h3><p>Look for your access email. Follow the setup checklist and video guides, and contact us if you need help.</p></div></li>
-  </ol>
-  <a class="inline-link" href="setup/">Already subscribed? Send your setup details <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-</section>
-<section class="platform-faq platform-section" id="faq">
-  <div><h2>Know what<br>you’re signing up for.</h2></div>
-  <div class="platform-faq-list">
-    <details><summary>Do I need to book a demo first?</summary><p>No. Start with the short video above. If you’d like to see the workflow for your business in more detail, a personal walkthrough is available.</p></details>
-    <details><summary>Will my account be ready immediately?</summary><p>Your workspace is prepared after payment and completed setup details. Standard setup is ready within three business days. Custom migration or new form requirements are reviewed separately.</p></details>
-    <details><summary>Which staff can use the five logins?</summary><p>The plan includes up to five individual staff accounts for your office and field team. Let us know who needs access when you send the setup form.</p></details>
-    <details><summary>How does the 60-month rate guarantee work?</summary><p>The $300 monthly base subscription rate stays the same for 60 months from signup while your subscription remains continuously active. The guarantee ends if you cancel. Applicable tax and separately scoped services are additional.</p></details>
-    <details><summary>Does the platform submit the report for me?</summary><p>Yes. Eligible approved reports are sent through your configured email submission workflow, with the report and submission history kept with the job. Approval, payment rules, a completed report, and a configured recipient determine when a report can be sent. Sending does not confirm acceptance by the authority.</p></details>
-    <details><summary>Can I add my own municipalities and custom forms?</summary><p>Yes. Teams nationwide can add municipalities and custom forms through the app, even when a form is not in our supplied library. Form fields need to be mapped and checked before live use. Confirm the current form, recipient, and accepted submission method with the authority. <a href="report-submission/">Read the submission guide</a>.</p></details>
-    <details><summary>What if an authority requires a portal?</summary><p>The submission workflow described here is email. If a provider requires a portal or another method, check that requirement with us before subscribing. <a href="#demo">Ask about your workflow</a>.</p></details>
-    <details><summary>Can I bring data from another system?</summary><p>A Jobber customer CSV import workflow is verified. Tell us which records you want to move. Other sources and more extensive migrations need their own agreed scope.</p></details>
-    <details><summary>How do invoices and payments work?</summary><p>The platform keeps invoices, receivables, and payment history with the work. Optional payment-provider connections are configured for your business.</p></details>
-    <details><summary>How do I get help or discuss billing?</summary><p>Email <a href="mailto:james@strataworks.tech">james@strataworks.tech</a> or call <a href="tel:+18033867728">(803) 386-7728</a>. Subscription terms and billing details are provided at checkout; contact us with questions before purchasing.</p></details>
-  </div>
+  <div class="workflow-next"><p>See each step on real product screens.</p><div class="workflow-next-actions"><a class="button button-primary" href="/backflow-operations-platform/how-it-works/">See how it works <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="inline-link" href="/backflow-operations-platform/pricing/">See the $300 plan</a></div></div>
 </section>
 <section class="search-resources platform-section" aria-labelledby="resources-heading"><h2 id="resources-heading">Take a closer look.</h2><div class="resource-links"><a href="report-submission/"><strong>Backflow report submission</strong><span>From field results to an approved email submission.</span></a><a href="syncta-alternative/"><strong>Considering a Syncta alternative?</strong><span>Compare team pricing, forms, and workflow fit.</span></a><a href="product-tour/"><strong>Watch the product tour</strong><span>The short story, with a complete transcript.</span></a></div></section>
-<section class="demo-section platform-section" id="demo">
-  <div class="demo-intro"><h2>A question before<br>you get started?</h2><p>Ask about your forms, request setup, or arrange an optional demo. Tell us what your business needs and we’ll follow up by email.</p><div class="demo-contact"><a href="mailto:james@strataworks.tech">james@strataworks.tech</a><a href="tel:+18033867728">(803) 386-7728</a></div></div>
-  <form class="demo-form" action="https://formsubmit.co/james@strataworks.tech" method="POST">
-    <input type="hidden" name="_subject" value="Backflow Operations question or setup request">
-    <input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="https://strataworks.tech/backflow-operations-platform/?demo=sent#demo">
-    <input type="hidden" name="landing_page" value="StrataWorks Backflow Operations">
-    <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="utm_term"><input type="hidden" name="utm_content">
-    <input type="text" name="_honey" class="form-trap" tabindex="-1" autocomplete="off" aria-hidden="true">
-    <p class="form-success" id="demo-success" role="status" hidden>Thanks—your request was submitted. We’ll follow up by email.</p>
-    <label>Name<input name="name" autocomplete="name" required maxlength="150"></label>
-    <label>Company<input name="company" autocomplete="organization" required maxlength="200"></label>
-    <label>Work email<input type="email" name="email" autocomplete="email" required maxlength="254"></label>
-    <label>What would you like to do?<select name="request_type" required><option>Ask about forms or fit</option><option>Request setup</option><option>Arrange a demo</option></select></label>
-    <label class="full-width">Municipalities or water providers<input name="municipalities" required maxlength="600" placeholder="Where you send your test reports"></label>
-    <label>Current system<input name="current_system" maxlength="250" placeholder="Jobber, spreadsheets, paper…"></label>
-    <label>Approximate tests per month<input name="monthly_tests" inputmode="numeric" maxlength="20"></label>
-    <label class="full-width">Your question<textarea name="goals" rows="4" required maxlength="3000"></textarea></label>
-    <button class="button button-primary" type="submit">Send your request <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-    <p class="form-note">Your details are used to respond to this request. Please do not include passwords, API keys, or customer records.</p>
-  </form>
-</section>
 </main><footer class="site-footer"><img src="/assets/strataworks-logo.png" alt="StrataWorks" width="260" height="189"><p>Precision. Performance. Partnership.</p><a href="mailto:james@strataworks.tech">james@strataworks.tech</a><p>&copy; <span id="year">2026</span> StrataWorks</p></footer></body></html>
