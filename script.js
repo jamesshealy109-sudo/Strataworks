@@ -60,11 +60,8 @@ if (demoSuccess && query.get('demo') === 'sent') {
 }
 
 const attributionFields = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
-// Visitors land on one page and submit from another, so keep the landing UTM tags for the session.
-const storage = (() => { try { return window.sessionStorage; } catch { return null; } })();
 attributionFields.forEach((name) => {
   const input = document.querySelector(`.demo-form input[name="${name}"]`);
-  const value = query.get(name) || storage?.getItem(name);
-  if (query.get(name)) storage?.setItem(name, query.get(name));
+  const value = query.get(name);
   if (input && value) input.value = value;
 });

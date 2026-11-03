@@ -18,7 +18,7 @@
 .platform-record small { display: block; margin-top: .7rem; }
 .platform-availability { margin: 3rem 0 0; padding: 1.4rem 0; border-top: 1px solid var(--line); color: #becbd8; font: .7rem/1.7 "IBM Plex Mono", monospace; }
 .platform-section { padding: clamp(4rem, 7vw, 7rem) var(--pad); }
-.platform-section :is(h2, h1) { margin: 0; max-width: 950px; font-size: clamp(2.3rem, 4.8vw, 5rem); line-height: 1; letter-spacing: -.055em; }
+.platform-section h2 { margin: 0; max-width: 950px; font-size: clamp(2.3rem, 4.8vw, 5rem); line-height: 1; letter-spacing: -.055em; }
 .platform-section p { line-height: 1.7; }
 .platform-section .kicker { line-height: 1.5; }
 .platform-problem, .regional-focus, .platform-faq { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2.5rem, 6vw, 6rem); background: var(--paper); color: var(--ink); }
@@ -66,7 +66,7 @@
   .platform-hero-bottom { grid-template-columns: 1.2fr 1fr; gap: 2rem; }
   .platform-hero .hero-actions { gap: 1.5rem; }
   .demo-section { grid-template-columns: 1fr; }
-  .demo-intro :is(h2, h1) { max-width: 750px; }
+  .demo-intro h2 { max-width: 750px; }
 }
 @media (max-width: 760px) {
   .platform-hero { padding-top: calc(var(--header-h) + 2rem); }

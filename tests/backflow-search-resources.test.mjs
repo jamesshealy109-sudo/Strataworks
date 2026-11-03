@@ -5,7 +5,7 @@ import { resolve } from 'node:path';
 import { createHash } from 'node:crypto';
 
 const root = 'backflow-operations-platform';
-const routes = ['report-submission', 'syncta-alternative', 'product-tour', 'how-it-works', 'pricing', 'faq', 'contact'];
+const routes = ['report-submission', 'syncta-alternative', 'product-tour'];
 const read = p => readFileSync(p, 'utf8');
 const graph = html => [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].flatMap(m => { const j = JSON.parse(m[1]); return j['@graph'] || [j]; });
 

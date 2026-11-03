@@ -20,10 +20,7 @@ if (video) {
     if (!finished) { track('backflow_video_complete'); finished = true; }
   });
 }
-const clicks = { '/pricing/': 'backflow_pricing_click', '/contact/': 'backflow_contact_click', '/how-it-works/': 'backflow_workflow_click', '/faq/': 'backflow_faq_click' };
-document.querySelectorAll('a[href^="/backflow-operations-platform/"]').forEach(link => {
-  const event = clicks[link.getAttribute('href').replace('/backflow-operations-platform', '')];
-  if (event) link.addEventListener('click', () => track(event, { link_text: link.textContent.trim().slice(0, 60) }));
-});
+document.querySelectorAll('a[href="#pricing"]').forEach(link => link.addEventListener('click', () => track('backflow_pricing_click')));
 document.querySelectorAll('[data-subscribe]').forEach(link => link.addEventListener('click', () => track('backflow_checkout_click')));
+document.querySelectorAll('a[href="#demo"]').forEach(link => link.addEventListener('click', () => track('backflow_contact_click')));
 document.querySelector('.demo-form')?.addEventListener('submit', () => track('backflow_inquiry_submit'));
