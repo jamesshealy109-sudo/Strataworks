@@ -11,9 +11,15 @@ Implements the website portion of [growth plan PR #3](https://github.com/jamessh
 - The pricing card crosses out two published Syncta Per Tester examples for five testers beside StrataWorks' $300 monthly offer: $99 × five = $495/month equivalent when billed annually, and $125 × five = $625/month when billed monthly. Syncta also has per-test and unlimited plans; billing and features differ. Source: https://help.syncta.com/en/articles/379405-general-billing-information (checked October 6, 2026; article dated December 5, 2023). Recheck competitor prices before publishing or extending the comparison.
 - First monthly payment is collected at checkout. Standard setup is ready within three business days after payment and completed setup details.
 - Custom imports, new municipality forms, and optional provider services are scoped separately before work starts.
-- Customer journey: Backflow page -> Stripe -> company setup form -> operator verifies payment and fit -> workspace and access email.
+- Customer journey: Backflow pricing page -> Stripe -> company setup form -> operator verifies payment and fit -> workspace and access email.
 - Supported forms vary by jurisdiction. Customers with unusual requirements should confirm fit before subscribing.
 - The optional personal walkthrough is still available.
+
+## Site structure
+
+The Backflow site is split into separate pages instead of one long page with anchor links. The pages are Overview (the hero and the 82-second video) at `/backflow-operations-platform/`, plus `how-it-works/`, `pricing/`, `faq/` and `contact/`. Every Backflow page shares the same nav. Why: each step a buyer takes shows up as its own page view in analytics and Google Ads, so marketing can see where visitors go. Link clicks are also tracked by destination in `sales-story.mjs` (`backflow_pricing_click`, `backflow_contact_click`, `backflow_workflow_click`, `backflow_faq_click`). Old `#pricing`/`#faq`/`#workflow` links into the overview now land on the overview hero. Point new links at the matching page.
+
+Site-wide copy is no longer uppercased with CSS. Words like "Managed IT" read differently in all caps, so text displays exactly as written in the HTML.
 
 ## Checkout connection
 
@@ -57,6 +63,13 @@ Rebuild with:
 ```powershell
 python scripts/build-backflow-sales-media.py --source PATH_TO_NARRATED_EXPORT --ffmpeg PATH_TO_FFMPEG
 ```
+
+The How it works screenshots are captured from the current app rather than taken from video frames. That way they stay sharp and carry no subtitles or tutorial callouts. From the product repo, run:
+```bash
+cd ../backflow-operations-platform
+.venv/bin/python ../Strataworks/scripts/capture-backflow-screenshots.py
+```
+The script boots the product's disposable demo environment (fictional data, network blocked) and captures at 2× with Playwright. It writes WebP files into `backflow-operations-platform/media/`. Only the submission-queue shot carries a highlight, around the row being approved. Check every image before publishing.
 
 The builder does not record against a live customer environment. The manifest records source release, chapter timestamps, durations and SHA-256 hashes. For later recording updates, use the existing disposable demo-video workflow and review substantive changes before replacing public media.
 

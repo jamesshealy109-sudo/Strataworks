@@ -3,12 +3,12 @@
 .msp-page :is(a, button, input, select, textarea, summary):focus-visible { outline: 3px solid #176cff; outline-offset: 5px; }
 .msp-page .button-primary { background: var(--cyan); color: var(--ink); box-shadow: 5px 5px 0 var(--blue); }
 .msp-page .button { min-width: 0; gap: 1rem; line-height: 1.4; }
-.msp-nav { display: flex; align-items: center; gap: 2rem; font: .7rem/1.4 "IBM Plex Mono", monospace; text-transform: uppercase; }
+.msp-nav { display: flex; align-items: center; gap: 2rem; font: .7rem/1.4 "IBM Plex Mono", monospace; }
 .msp-nav > a:last-child { color: var(--cyan); padding: .9rem 1rem; border: 1px solid #496078; }
 .msp-nav a:hover, .msp-phone:hover { color: var(--cyan); }
 .msp-hero { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,1fr); gap: clamp(2rem,4vw,4rem); align-items: start; padding: calc(var(--header-h) + 2rem) var(--pad) 3rem; }
 .msp-hero .kicker { color: var(--cyan); margin-bottom: 1.25rem; font-size: .65rem; }
-.msp-hero h1 { margin: 0; max-width: 760px; font-size: clamp(2.65rem,4.1vw,4rem); font-weight: 700; line-height: 1.03; letter-spacing: -.055em; text-transform: uppercase; }
+.msp-hero h1 { margin: 0; max-width: 760px; font-size: clamp(2.65rem,4.1vw,4rem); font-weight: 700; line-height: 1.03; letter-spacing: -.055em; }
 .msp-hero h1 span { color: var(--cyan); }
 .msp-positioning { margin: 1.6rem 0 1rem; font-size: clamp(1.3rem,2vw,1.85rem); font-weight: 500; line-height: 1.25; letter-spacing: -.03em; }
 .msp-lede { max-width: 640px; margin: 0; color: #b8c6d5; font-size: 1.04rem; line-height: 1.65; }
@@ -34,7 +34,7 @@
 #msp-consultation-form .button:disabled { cursor: default; box-shadow: none; transform: none; }
 .msp-scope { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.2rem; padding: 1.3rem var(--pad); background: var(--ink-2); border-block: 1px solid var(--line); font: .65rem/1.5 "IBM Plex Mono", monospace; letter-spacing: .1em; color: #b8c6d5; }
 .msp-section { padding: clamp(4rem,7vw,7rem) var(--pad); }
-.msp-section h2 { max-width: 1000px; margin: 0; font-size: clamp(2.4rem,4.8vw,4.8rem); line-height: 1; letter-spacing: -.055em; text-transform: uppercase; }
+.msp-section h2 { max-width: 1000px; margin: 0; font-size: clamp(2.4rem,4.8vw,4.8rem); line-height: 1; letter-spacing: -.055em; }
 .msp-section p { line-height: 1.7; }
 .msp-section .kicker { color: var(--cyan); }
 .msp-light { background: var(--paper); color: var(--ink); }
