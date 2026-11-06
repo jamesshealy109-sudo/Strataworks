@@ -5,7 +5,6 @@ const read = path => readFileSync(path, 'utf8');
 const publicPages = [
   'index.html',
   'managed-it-services/index.html',
-  'backflow-operations-platform/index.html',
   'services/ai-automation/index.html',
   'services/business-phone-systems/index.html',
   'services/it-consulting/index.html',
