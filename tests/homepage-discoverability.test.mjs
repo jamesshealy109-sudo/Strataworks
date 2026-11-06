@@ -18,11 +18,10 @@ assert.match(feature, /href="\/managed-it-services\/#consultation">Talk With Str
 assert.match(readFileSync('managed-it-services/index.html', 'utf8'), /id="consultation"/);
 const services = home.match(/<section class="section services"[\s\S]*?<\/section>/)[0];
 assert.ok(services.includes(feature), 'feature belongs in Capabilities');
-assert.ok(services.indexOf('FEATURED SERVICE / MANAGED IT') < services.indexOf('02 / STRATAWORKS BACKFLOW OPERATIONS'), 'Managed IT feature must precede the backflow platform');
+assert.ok(services.indexOf('FEATURED SERVICE / MANAGED IT') < services.indexOf('02 / BACKFLOWCORE BY STRATAWORKS'), 'Managed IT feature must precede the BackflowCore handoff');
 assert.match(services, /href="managed-it-services\/">Need ongoing IT support\?/);
-assert.match(services, /Backflow Operations Platform/);
-assert.match(services, /href="backflow-operations-platform\/#workflow">See the workflow/);
-assert.match(services, /href="backflow-operations-platform\/">Explore Backflow Operations/);
+assert.match(services, /BackflowCore has its own home/);
+assert.match(services, /href="https:\/\/backflowcore\.com\/">Visit BackflowCore/);
 assert.equal((services.match(/<article class="service-card /g) || []).length, 6);
 const footer = home.match(/<footer\b[\s\S]*?<\/footer>/)[0];
 assert.match(footer, /href="\/managed-it-services\/">Managed IT Services<\/a>/);

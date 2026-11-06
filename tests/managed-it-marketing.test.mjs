@@ -45,7 +45,7 @@ for (const field of ['name', 'company', 'email', 'phone', 'users', 'locations', 
 for (const range of ['1–5', '6–10', '11–25', '26–50', '51–100', '100+', '3–5', '6+']) assert.ok(page.includes(`<option>${range}</option>`), range);
 assert.match(page, /id="msp-consultation-error"[^>]*role="alert"[^>]*hidden/);
 assert.match(read('index.html'), /href="managed-it-services\/"/);
-for (const file of ['index.html', pagePath, 'backflow-operations-platform/index.html', ...['it-consulting','networking','ai-automation','business-phone-systems','web-design'].map(service => `services/${service}/index.html`)]) {
+for (const file of ['index.html', pagePath, ...['it-consulting','networking','ai-automation','business-phone-systems','web-design'].map(service => `services/${service}/index.html`)]) {
   const html = read(file);
   assert.equal(html.split('gtag/js?id=AW-18419218909').length - 1, 1, file);
   assert.equal(html.split("gtag('config', 'AW-18419218909');").length - 1, 1, file);
