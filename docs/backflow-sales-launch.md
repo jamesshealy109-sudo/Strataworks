@@ -2,7 +2,7 @@
 
 > Archived November 5, 2026. BackflowCore now owns the public Backflow sales journey at https://backflowcore.com/. The StrataWorks Backflow pages are redirects. The checkout, setup, and publication instructions below describe the former StrataWorks funnel and must not be used for new customers without checking the current BackflowCore workflow.
 
-The retired HTML routes use immediate browser redirects because this StrataWorks site is served by GitHub Pages. They do not return HTTP 301/308 status codes. A server-level SEO migration would require a separately verified hosting or edge redirect configuration.
+The retired sales and setup entry routes use immediate browser redirects because this StrataWorks site is served by GitHub Pages. The legacy setup receipt shows its confirmation for 15 seconds before forwarding. These routes do not return HTTP 301/308 status codes. A server-level SEO migration would require a separately verified hosting or edge redirect configuration.
 
 Implements the website portion of [growth plan PR #3](https://github.com/jamesshealy109-sudo/Strataworks/pull/3). The customer can watch the workflow, subscribe, and submit company details. Standard workspace preparation remains manual.
 
